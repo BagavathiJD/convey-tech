@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap');
+
+.projects-page {
+  font-family: 'Inter', sans-serif;
+  color: #14161a;
+  background: #fff;
+}
+
+.projects-page .projects-banner {
+  position: relative;
+  isolation: isolate;
+  background-color: #10141d;
+  background-image: url('/images/convey-tech/slider-img-3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 4vw 60px;
+}
+
+.projects-page .projects-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(160deg, rgba(16, 20, 29, 0.88), rgba(27, 36, 54, 0.78) 55%, rgba(34, 44, 66, 0.82));
+}
+
+.projects-page .projects-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-page .projects-banner .eyebrow {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.projects-page .projects-banner h1 {
+  font-family: 'Archivo Black', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1;
+  margin: 0 0 24px;
+}
+
+.projects-page .projects-banner h1 span {
+  color: #d21f26;
+}
+
+.projects-page .projects-banner p {
+  color: #c9d0dc;
+  font-size: 16.5px;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 0 0 36px;
+}
+
+.projects-page .projects-stats {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 28px;
+}
+
+.projects-page .projects-stats div {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 32px;
+  color: #fff;
+}
+
+.projects-page .projects-stats div span {
+  color: #d21f26;
+}
+
+.projects-page .projects-stats small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #98a1b3;
+  margin-top: 4px;
+}
+
+.projects-page .projects-filters {
+  background: #f6f7f9;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 22px 4vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 80px;
+  z-index: 20;
+}
+
+.projects-page .projects-filters > span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-right: 6px;
+}
+
+.projects-page .filter-btn {
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #14161a;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  padding: 7px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.projects-page .filter-btn:hover {
+  border-color: #14161a;
+}
+
+.projects-page .filter-btn.active {
+  background: #14161a;
+  border-color: #14161a;
+  color: #fff;
+}
+
+.projects-page .projects-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 4vw 90px;
+}
+
+.projects-page .projects-list h2 {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(26px, 3vw, 36px);
+  margin: 0 0 40px;
+}
+
+.projects-page .projects-list h2 span {
+  color: #d21f26;
+}
+
+.projects-page .project-row {
+  display: grid;
+  grid-template-columns: 50px 1.1fr 1.7fr;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.projects-page .project-row:last-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.projects-page .project-row.hidden {
+  display: none;
+}
+
+.projects-page .project-row .num {
+  font-weight: 800;
+  font-size: 13px;
+  color: #c7cbd3;
+}
+
+.projects-page .project-row .client {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.projects-page .project-row .location {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.projects-page .project-row .scope {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a3f47;
+}
+
+.projects-page .tags {
+  margin-top: 14px;
+}
+
+.projects-page .tags span {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.projects-page .tag-silo {
+  background: rgba(210, 31, 38, 0.08);
+  color: #d21f26;
+}
+
+.projects-page .tag-conveyor {
+  background: rgba(47, 111, 176, 0.09);
+  color: #2f6fb0;
+}
+
+.projects-page .tag-plant,
+.projects-page .tag-blower {
+  background: rgba(20, 22, 26, 0.06);
+  color: #4a4f58;
+}
+
+.projects-page .tag-export {
+  background: rgba(15, 140, 90, 0.09);
+  color: #0f8c5a;
+}
+
+@media (max-width: 760px) {
+  .projects-page .projects-banner {
+    padding: 28px 20px 32px;
+  }
+
+  .projects-page .projects-banner h1 {
+    font-size: clamp(26px, 8.5vw, 40px);
+    line-height: 1.12;
+  }
+
+  .projects-page .projects-banner p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .projects-page .projects-stats {
+    gap: 22px 28px;
+  }
+
+  .projects-page .projects-stats div {
+    font-size: 24px;
+  }
+
+  .projects-page .project-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .projects-page .projects-filters {
+    top: 70px;
+  }
+}

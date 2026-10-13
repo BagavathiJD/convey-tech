@@ -1,0 +1,396 @@
+.ct-presence {
+  --ct-yellow: var(--pbmit-global-color, #f5c518);
+  --ct-yellow-rgb: var(--pbmit-global-color-rgb, 245, 197, 24);
+  --ct-dark: var(--pbmit-secondary-color, #0d1a24);
+  --ct-dark-rgb: var(--pbmit-blackish-color-rgb, 13, 26, 36);
+  --ct-muted: rgba(255, 255, 255, 0.68);
+  --ct-rule: rgba(255, 255, 255, 0.12);
+  --ct-surface: rgba(255, 255, 255, 0.06);
+  --ct-white: #ffffff;
+  position: relative;
+  padding: 100px 40px 40px;
+  overflow: visible;
+  isolation: isolate;
+  background: #0d1a24;
+  font-family: var(--pbmit-body-typography-font-family, 'Roboto', sans-serif);
+  color: var(--ct-white);
+  -webkit-font-smoothing: antialiased;
+  z-index: 1;
+}
+
+.ct-presence .blueprint-grid {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background-image:
+    linear-gradient(var(--ct-rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ct-rule) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.55;
+  mask-image: linear-gradient(to bottom, black, black 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ct-presence .presence-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 48px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid var(--ct-rule);
+  z-index: 1;
+}
+
+.ct-presence .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ct-yellow);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.ct-presence .eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 3px;
+  background: var(--ct-yellow);
+  display: inline-block;
+}
+
+.ct-presence h2.headline {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-weight: 700;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ct-white);
+  margin: 0;
+}
+
+.ct-presence .presence-header p {
+  align-self: end;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ct-muted);
+  max-width: 36ch;
+  margin: 0;
+}
+
+.ct-presence .compass {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110px;
+  height: 110px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.ct-presence .route {
+  position: relative;
+  z-index: 1;
+  min-height: 560px;
+  padding: 260px 0 280px;
+}
+
+.ct-presence .route-line-wrap {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.ct-presence .route-line-bg {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.28) 0 8px,
+    transparent 8px 16px
+  );
+  opacity: 0.7;
+}
+
+.ct-presence .route-line-fg {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: var(--ct-yellow);
+  transition: width 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.ct-presence .route.in-view .route-line-fg {
+  width: 100%;
+}
+
+.ct-presence .stops {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ct-presence .stop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ct-presence .stop:nth-child(odd) .presence-card {
+  position: absolute;
+  bottom: calc(100% + 34px);
+}
+
+.ct-presence .stop:nth-child(even) .presence-card {
+  position: absolute;
+  top: calc(100% + 34px);
+}
+
+.ct-presence .node {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: #0d1a24;
+  border: 3px solid var(--ct-yellow);
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.4);
+  box-shadow: 0 0 0 4px rgba(var(--ct-yellow-rgb), 0.22);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ct-presence .route.in-view .node {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ct-presence .stop:nth-child(1) .node {
+  transition-delay: 0.15s;
+}
+.ct-presence .stop:nth-child(2) .node {
+  transition-delay: 0.5s;
+}
+.ct-presence .stop:nth-child(3) .node {
+  transition-delay: 0.85s;
+}
+.ct-presence .stop:nth-child(4) .node {
+  transition-delay: 1.2s;
+}
+
+.ct-presence .stem {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background: var(--ct-rule);
+}
+
+.ct-presence .stop:nth-child(odd) .stem {
+  bottom: 50%;
+  height: 34px;
+}
+.ct-presence .stop:nth-child(even) .stem {
+  top: 50%;
+  height: 34px;
+}
+
+.ct-presence .presence-card {
+  width: 250px;
+  padding: 18px 18px 16px;
+  background: var(--ct-surface);
+  border-radius: 14px;
+  border-top: 3px solid var(--ct-yellow);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ct-presence .stop:nth-child(odd) .presence-card {
+  transform: translateY(10px);
+}
+.ct-presence .stop:nth-child(even) .presence-card {
+  transform: translateY(-10px);
+}
+.ct-presence .route.in-view .presence-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ct-presence .stop:nth-child(1) .presence-card {
+  transition-delay: 0.3s;
+}
+.ct-presence .stop:nth-child(2) .presence-card {
+  transition-delay: 0.65s;
+}
+.ct-presence .stop:nth-child(3) .presence-card {
+  transition-delay: 1s;
+}
+.ct-presence .stop:nth-child(4) .presence-card {
+  transition-delay: 1.35s;
+}
+
+.ct-presence .presence-card .idx {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ct-yellow);
+  margin-bottom: 10px;
+}
+
+.ct-presence .presence-card h3 {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  color: var(--ct-white);
+  line-height: 1.25;
+}
+
+.ct-presence .presence-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ct-muted);
+  margin: 0 0 14px;
+}
+
+.ct-presence .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ct-presence .tag {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--ct-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ct-presence .stop:nth-child(4) .tag {
+  border-color: rgba(var(--ct-yellow-rgb), 0.55);
+  color: var(--ct-dark);
+  background: var(--ct-yellow);
+}
+
+.ct-presence .closing {
+  margin-top: 0;
+  background: var(--ct-dark);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 72px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 6px solid var(--ct-yellow);
+}
+
+.ct-presence .closing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.ct-presence .closing h3 {
+  position: relative;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--ct-white);
+  max-width: 18ch;
+  margin: 0;
+}
+
+.ct-presence .closing h3 span {
+  color: var(--ct-yellow);
+}
+
+@media (max-width: 1100px) {
+  .ct-presence {
+    padding: 80px 28px 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ct-presence {
+    padding: 72px 20px 24px;
+  }
+  .ct-presence .presence-header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 48px;
+  }
+  .ct-presence .compass {
+    display: none;
+  }
+  .ct-presence .presence-header p {
+    align-self: auto;
+    max-width: none;
+  }
+  .ct-presence .route {
+    min-height: 0;
+    padding: 28px 0 28px 26px;
+  }
+  .ct-presence .route-line-wrap {
+    top: 0;
+    left: 5px;
+    right: auto;
+    width: 2px;
+    height: 100%;
+  }
+  .ct-presence .route-line-bg {
+    background: repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.28) 0 8px,
+      transparent 8px 16px
+    );
+  }
+  .ct-presence .route-line-fg {
+    width: 2px !important;
+    height: 0%;
+    transition: height 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .ct-presence .route.in-view .route-line-fg {
+    height: 100%;
+  }
+  .ct-presence .stops {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .ct-presence .stop {
+    justify-content: flex-start;
+  }
+  .ct-presence .stop .node {
+    position: absolute;
+    left: -26px;
+    top: 22px;
+  }
+  .ct-presence .stem {
+    display: none;
+  }
+  .ct-presence .stop:nth-child(odd) .presence-card,
+  .ct-presence .stop:nth-child(even) .presence-card {
+    position: static;
+    transform: translateY(0) !important;
+    width: 100%;
+    margin-left: 18px;
+  }
+}
