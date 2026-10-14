@@ -12,22 +12,25 @@ export default function Navbar({ openMenus, toggleMenu, onNavigate, navId }) {
   return (
     <nav className="main-navigation pbmit-navbar main-menu navbar-expand-xl navbar-light" id={navId}>
       <div>
-        <span
-          className="closepanel"
-          onClick={onNavigate}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => e.key === 'Enter' && onNavigate()}
-        >
-          <svg className="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
-            <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
-            <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
-          </svg>
-        </span>
-        <div className="pbmit-mobile-menu-logo">
-          <Link to="/" onClick={onNavigate}>
-            <img src="/images/convey-tech/convey-tech-logo.png" alt={site.name} />
-          </Link>
+        <div className="pbmit-mobile-menu-header">
+          <div className="pbmit-mobile-menu-logo">
+            <Link to="/" onClick={onNavigate}>
+              <img src="/images/convey-tech/convey-tech-logo.png" alt={site.name} />
+            </Link>
+          </div>
+          <span
+            className="closepanel"
+            onClick={onNavigate}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && onNavigate()}
+            aria-label="Close menu"
+          >
+            <svg className="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+              <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
+              <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
+            </svg>
+          </span>
         </div>
         <ul className="navigation clearfix" id="pbmit-top-menu">
           {navItems.map((item) => {

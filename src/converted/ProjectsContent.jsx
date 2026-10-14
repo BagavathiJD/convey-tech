@@ -47,7 +47,7 @@ export default function ProjectsContent() {
         <p>
           A record of silo, conveyor and batching plant systems supplied and commissioned for leading construction and RMC companies — from Chennai to Mumbai, and beyond.
         </p>
-        {/* <div className="projects-stats">
+        <div className="projects-stats">
           <div>
             10+<small>Clients on record</small>
           </div>
@@ -57,7 +57,7 @@ export default function ProjectsContent() {
           <div>
             4<small>States &amp; export markets</small>
           </div>
-        </div> */}
+        </div>
       </section>
 
       <div className="projects-filters">

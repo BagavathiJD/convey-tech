@@ -124,15 +124,15 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.35) 60%, transparent 100%);
   animation: none;
 }
 
 .site-header.ct-header.is-scrolled {
   position: fixed;
-  background: rgba(13, 26, 36, 0.82);
+  background: rgb(18 34 49);
   backdrop-filter: blur(14px);
-  box-shadow: 0 8px 24px rgba(13, 26, 36, 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 .ct-header-inner {
@@ -146,19 +146,13 @@ p {
   margin: 0 auto;
 }
 
-.ct-header-logo {
-  flex: 0 0 auto;
 
-  border-radius: 12px;
-  padding: 6px 10px;
-  line-height: 0;
-}
 
 .ct-header-logo img {
   display: block;
-  height: 44px;
+  height: 42px;
   width: auto;
-  max-height: 44px;
+  max-height: 42px;
 }
 
 .ct-header-nav {
@@ -354,15 +348,22 @@ p {
   z-index: 1;
   pointer-events: none;
   background:
+    /* Top scrim layer: makes header and logo clearly visible across the banner */
+    linear-gradient(180deg,
+      rgba(5, 12, 22, 0.85) 0%,
+      rgba(5, 12, 22, 0.55) 18%,
+      rgba(5, 12, 22, 0.18) 32%,
+      transparent 45%),
+    /* Left side content contrast gradient */
     linear-gradient(90deg,
-      rgba(8, 20, 34, 0.62) 0%,
-      rgba(8, 20, 34, 0.38) 42%,
+      rgba(8, 20, 34, 0.65) 0%,
+      rgba(8, 20, 34, 0.4) 42%,
       rgba(8, 20, 34, 0.08) 65%,
       transparent 82%),
+    /* Bottom gradient */
     linear-gradient(180deg,
-      rgba(8, 18, 30, 0.42) 0%,
-      transparent 38%,
-      rgba(8, 18, 30, 0.58) 100%);
+      transparent 65%,
+      rgba(8, 18, 30, 0.6) 100%);
 }
 
 .pbmit-slider-one .pbmit-slider-item .container,
@@ -653,8 +654,22 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
     padding: 10px 18px;
   }
 
+  /* .ct-header-logo {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  } */
+
+  /* .ct-header-logo img {
+    height: 36px;
+    max-height: 36px;
+  } */
+
   .ct-header-nav {
     justify-content: flex-end;
+    position: relative;
+    z-index: 1005;
   }
 
   .ct-header-cta {
@@ -664,7 +679,7 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   .site-header.ct-header .pbmit-burger-menu-wrapper {
     display: block;
     position: relative;
-    z-index: 1002;
+    z-index: 1001;
   }
 
   .site-header.ct-header .nav-menu-toggle {
@@ -690,11 +705,11 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
     display: block;
     position: fixed;
     inset: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100vw !important;
+    height: 100vh !important;
     max-width: none;
     z-index: 1000;
-    background: rgba(13, 26, 36, 0.55);
+    background: rgba(13, 26, 36, 0.6);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -714,14 +729,14 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
     top: 0;
     right: 0;
     left: auto;
-    z-index: 1001;
+    z-index: 1005;
     width: min(320px, 86vw);
     height: 100dvh;
     height: 100vh;
     max-height: 100dvh;
     padding: 0;
     margin: 0;
-    background: #ffffff;
+    background: #ffffff !important;
     box-shadow: -12px 0 32px rgba(13, 26, 36, 0.18);
     overflow-x: hidden;
     overflow-y: auto;
@@ -739,34 +754,51 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
     overflow-y: auto;
   }
 
-  .site-header.ct-header .closepanel {
-    display: block;
+  .pbmit-mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(13, 26, 36, 0.08);
     position: sticky;
     top: 0;
-    z-index: 2;
-    margin: 0 0 0 auto;
-    right: 0;
-    width: 100%;
-    height: 64px;
-    line-height: 64px;
-    text-align: right;
-    padding: 0 20px;
-    background: #ffffff;
-    border-radius: 0;
-    box-shadow: 0 1px 0 rgba(13, 26, 36, 0.08);
+    z-index: 10;
   }
 
-  .pbmit-mobile-menu-logo {
+  .pbmit-mobile-menu-header .pbmit-mobile-menu-logo {
     display: block;
-    padding: 8px 20px 18px;
-    margin: 0 0 8px;
-    border-bottom: 0;
+    padding: 0;
+    margin: 0;
+    flex: 1;
   }
 
-  .pbmit-mobile-menu-logo img {
+  .pbmit-mobile-menu-header .pbmit-mobile-menu-logo img {
     display: block;
-    max-width: 190px;
+    max-width: 175px;
     height: auto;
+  }
+
+  .pbmit-mobile-menu-header .closepanel {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    line-height: 1;
+    margin: 0 0 0 12px;
+    padding: 0;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: none;
+    color: #0d1a24;
+    transition: background-color 0.2s ease;
+  }
+
+  .pbmit-mobile-menu-header .closepanel:hover {
+    background: rgba(13, 26, 36, 0.06);
   }
 
   .site-header.ct-header ul.navigation.clearfix {
@@ -997,12 +1029,14 @@ a.product-lightbox-link {
   .pbmit-react-lightbox {
     padding: 16px;
   }
+
   .pbmit-lightbox-close {
     top: 14px;
     right: 14px;
     width: 42px;
     height: 42px;
   }
+
   .pbmit-lightbox-close svg {
     width: 18px;
     height: 18px;
