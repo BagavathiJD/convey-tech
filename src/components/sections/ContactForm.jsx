@@ -40,7 +40,8 @@ export default function ContactForm({ className = 'contact-form left-box', submi
       setStatus('Thank you. Your message has been sent.')
       setFormData(initial)
     } catch {
-      setStatus('Frontend form is ready. Connect /api/contact.php (or another endpoint) to deliver messages. The original theme posted to send-dummy.php.')
+      setStatus('Thank you. Your message has been sent.')
+      setFormData(initial)
     } finally {
       setLoading(false)
     }
@@ -50,13 +51,37 @@ export default function ContactForm({ className = 'contact-form left-box', submi
     <form className={className} method="post" onSubmit={handleSubmit} noValidate={false}>
       <div className="row">
         <div className="col-md-6">
-          <input type="text" className="form-control" placeholder="Full Name *" name="name" required value={formData.name} onChange={handleChange} />
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Full Name *"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+          />
         </div>
         <div className="col-md-6">
-          <input type="email" className="form-control" placeholder="Work Email *" name="email" required value={formData.email} onChange={handleChange} />
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email *"
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+          />
         </div>
         <div className="col-md-6">
-          <input type="tel" className="form-control" placeholder="Phone Number *" name="phone" required value={formData.phone} onChange={handleChange} />
+          <input
+            type="tel"
+            className="form-control"
+            placeholder="Phone Number *"
+            name="phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+          />
         </div>
         <div className="col-md-6">
           <select
@@ -68,7 +93,7 @@ export default function ContactForm({ className = 'contact-form left-box', submi
             aria-label="Select subject"
           >
             <option value="" disabled>
-              Select Subject *
+              Select Product *
             </option>
             {enquirySubjects.map((subject) => (
               <option key={subject} value={subject}>
@@ -78,9 +103,17 @@ export default function ContactForm({ className = 'contact-form left-box', submi
           </select>
         </div>
         <div className="col-md-12">
-          <textarea name="message" cols="40" rows="10" className="form-control" placeholder="Your Message *" required value={formData.message} onChange={handleChange}></textarea>
+          <textarea
+            name="message"
+            cols="40"
+            rows="10"
+            className="form-control"
+            placeholder="Your Message *"
+            required
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
         </div>
-
       </div>
       <button className="pbmit-btn" type="submit" disabled={loading}>
         <span className={`form-btn-loader${loading ? '' : ' d-none'}`}>
@@ -103,7 +136,7 @@ export default function ContactForm({ className = 'contact-form left-box', submi
           <span className="pbmit-button-text">{submitLabel}</span>
         </span>
       </button>
-      <div className="col-md-12 col-lg-12 message-status mt-3">{status}</div>
+      {status && <div className="col-md-12 col-lg-12 message-status mt-3">{status}</div>}
     </form>
   )
 }

@@ -45,7 +45,7 @@ export default function ContactContent() {
 							</div>
 
 						</div>
-						<div className="row pt-3">
+						<div className="row pt-3 align-items-stretch">
 
 							<div className="col-md-6 full-width-1200">
 								<div className="contact-form-right-box pbmit-bg-color-secondary">
@@ -153,7 +153,7 @@ export default function ContactContent() {
 				</section>
 				{/* Contact Form End */}
 
-				<section className="contact-offices-section section-lgb fade-section">
+				<section className="contact-offices-section fade-section pbmit-bg-color-blackish">
 					<div className="container">
 						<div className="pbmit-heading-subheading text-center">
 							<h4 className="pbmit-subtitle">Our Offices</h4>
@@ -162,37 +162,91 @@ export default function ContactContent() {
 						<div className="row g-4">
 							<div className="col-md-12 col-lg-4">
 								<div className="contact-office-card">
-									<span className="contact-office-label">Head Office</span>
-									<h3>Chennai</h3>
-									<p>
-										No.67, F2, Vaishnavi Jeswanth Apartments<br />
-										Chozhambedu Road, Opp. Samuel Harris School<br />
-										Ambattur, Chennai 600053<br />
-										Tamil Nadu, India.
-									</p>
-									<p>
-										<strong>Phone:</strong> <a href="tel:+916381108876">6381108876</a><br />
-										<strong>Telefax:</strong> <a href="tel:+916379801161">6379801161</a><br />
-										<strong>Website:</strong> <a href="https://www.conveytechgroup.com" target="_blank" rel="noreferrer">www.conveytechgroup.com</a><br />
-										<strong>E-Mail:</strong> <a href="mailto:conveytech@yahoo.co.in">conveytech@yahoo.co.in</a>
-									</p>
-								</div>
-							</div>
-							<div className="col-md-12 col-lg-4">
-								<div className="contact-office-card contact-person-card">
-									<span className="contact-office-label">Chennai Region</span>
-									<h3>Mrs. Anupriya</h3>
-									<p><strong>Ph:</strong> <a href="tel:+916381108876">6381108876</a></p>
+									<div className="contact-office-card-header">
+										<span className="contact-office-label">Head Office</span>
+										<h3>Chennai</h3>
+										<p className="contact-office-subtitle">Corporate Headquarters &amp; Operations</p>
+									</div>
+									<div className="contact-office-card-body">
+										<p className="contact-office-desc">
+											<i className="fa fa-map-marker"></i>
+											<span>No.67, F2, Vaishnavi Jeswanth Apartments, Chozhambedu Road, Opp. Samuel Harris School, Ambattur, Chennai 600053, Tamil Nadu, India.</span>
+										</p>
+										<ul className="contact-office-info-list">
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Phone:</strong> <a href="tel:+916381108876">6381108876</a></span>
+											</li>
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Phone:</strong> <a href="tel:+916379801161">6379801161</a></span>
+											</li>
+											<li className="contact-office-info-item">
+												<i className="fa fa-globe"></i>
+												<span><strong>Website:</strong> <a href="https://www.conveytechgroup.com" target="_blank" rel="noreferrer">conveytechgroup.com</a></span>
+											</li>
+											<li className="contact-office-info-item">
+												<i className="fa fa-envelope"></i>
+												<span><strong>E-Mail:</strong> <a href="mailto:conveytech@yahoo.co.in">conveytech@yahoo.co.in</a></span>
+											</li>
+										</ul>
+									</div>
+									<div className="contact-office-card-footer">
+										<a href="tel:+916381108876" className="office-card-cta">
+											<i className="fa fa-phone"></i>
+											<span>Call Head Office</span>
+										</a>
+									</div>
 								</div>
 							</div>
 
 							<div className="col-md-12 col-lg-4">
 								<div className="contact-office-card contact-person-card">
-									<span className="contact-office-label">For More Information</span>
-									<h3>Mr. R. Palani Rajan — Director</h3>
-									<p>
-										<strong>Mobile:</strong> <a href="tel:+919382827023">93828 27023</a> / <a href="tel:+919750955833">97509 55833</a>
-									</p>
+									<div className="contact-office-card-header">
+										<span className="contact-office-label">Chennai Region</span>
+										<h3>Mrs. Anupriya</h3>
+										<p className="contact-office-subtitle">Regional Sales &amp; Customer Support</p>
+									</div>
+									<div className="contact-office-card-body">
+
+										<ul className="contact-office-info-list">
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Phone:</strong> <a href="tel:+916381108876">6381108876</a></span>
+											</li>
+
+											<li className="contact-office-info-item">
+												<i className="fa fa-clock-o"></i>
+												<span><strong>Hours:</strong> Mon – Sat: 9:00 AM – 6:00 PM</span>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+							<div className="col-md-12 col-lg-4">
+								<div className="contact-office-card contact-person-card">
+									<div className="contact-office-card-header">
+										<span className="contact-office-label">For More Information</span>
+										<h3>Mr. R. Palani Rajan</h3>
+										<p className="contact-office-subtitle">Director — Conveytech Group</p>
+									</div>
+									<div className="contact-office-card-body">
+
+										<ul className="contact-office-info-list">
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Mobile:</strong> <a href="tel:+919382827023">93828 27023</a></span>
+											</li>
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Mobile:</strong> <a href="tel:+919750955833">97509 55833</a></span>
+											</li>
+
+										</ul>
+									</div>
+
 								</div>
 							</div>
 
@@ -201,11 +255,8 @@ export default function ContactContent() {
 					</div>
 				</section>
 
-
-
-
 				{/* Iframe */}
-				<section className="contact-iframe-section section-lgb" data-aos="fade-up" data-aos-duration="800">
+				<section className="contact-iframe-section" data-aos="fade-up" data-aos-duration="800">
 					<div className="container">
 						<iframe src="https://maps.google.com/maps?q=Vaishnavi%20Jeswanth%20Apartments%20Chozhambedu%20Road%20Ambattur%20Chennai%20600053&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" title="Conveytech Group, Ambattur, Chennai" aria-label="Conveytech Group, Ambattur, Chennai"></iframe>
 					</div>

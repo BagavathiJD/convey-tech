@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-12 col-lg-6 pbmit-footer-left">
-                <h3>Pioneering a New Era of Steel working Excellence</h3>
+                <h3>Empowering Industries with Advanced Engineering Solutions</h3>
               </div>
               <div className="col-md-12 col-lg-6 text-lg-end">
                 <div className="pbmit-footer-logo">
@@ -28,7 +28,7 @@ export default function Footer() {
               <aside className="widget">
                 <h2 className="widget-title">Our Company</h2>
                 <ul className="menu footer-company-contact">
-                  
+
                   <li>{site.address}</li>
                   <li>
                     <a href={`mailto:${site.email}`}>{site.email}</a>
@@ -64,7 +64,7 @@ export default function Footer() {
                 </div>
               </aside>
             </div>
-           {/*} <div className="col-md-6 col-lg-3 pbmit-footer-widget">
+            {/* <div className="col-md-6 col-lg-3 pbmit-footer-widget">
               <aside className="widget">
                 <h2 className="widget-title">Quick Link</h2>
                 <ul className="menu">
@@ -79,7 +79,7 @@ export default function Footer() {
                   </li>
                 </ul>
               </aside>
-            </div>*/}
+            </div> */}
           </div>
         </div>
       </div>

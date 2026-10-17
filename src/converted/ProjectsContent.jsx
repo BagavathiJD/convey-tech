@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/projects.css'
 
 export default function ProjectsContent() {
@@ -36,31 +37,34 @@ export default function ProjectsContent() {
   }, [])
 
   return (
-    <div className="page-content projects-page">
-      <section className="projects-banner">
-        {/* <div className="eyebrow">Our Track Record</div> */}
-        <h1>
-          Projects <span>Delivered</span>
-          <br />
-          Across India
-        </h1>
-        <p>
-          A record of silo, conveyor and batching plant systems supplied and commissioned for leading construction and RMC companies — from Chennai to Mumbai, and beyond.
-        </p>
-        <div className="projects-stats">
-          <div>
-            10+<small>Clients on record</small>
-          </div>
-          <div>
-            100+<small>Units supplied</small>
-          </div>
-          <div>
-            4<small>States &amp; export markets</small>
+    <>
+      {/* Title Bar */}
+      <div className="pbmit-title-bar-wrapper">
+        <div className="container">
+          <div className="pbmit-title-bar-content">
+            <div className="pbmit-title-bar-content-inner">
+              <div className="pbmit-tbar">
+                <div className="pbmit-tbar-inner container">
+                  <h1 className="pbmit-tbar-title"> Projects</h1>
+                </div>
+              </div>
+              <div className="pbmit-breadcrumb">
+                <div className="pbmit-breadcrumb-inner">
+                  <span>
+                    <Link to="/" className="home"><span>Home</span></Link>
+                  </span>
+                  <span className="sep"></span>
+                  <span><span className="post-root post post-post current-item"> Projects</span></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+      {/* Title Bar End*/}
 
-      <div className="projects-filters">
+      <div className="page-content projects-page">
+        <div className="projects-filters">
         <span>Filter</span>
         <button type="button" className="filter-btn active" data-filter="all">
           All projects
@@ -244,5 +248,6 @@ export default function ProjectsContent() {
         </div>
       </div>
     </div>
+    </>
   )
 }
