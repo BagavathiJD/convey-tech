@@ -2758,21 +2758,8 @@ aside.widget.widget-tag-cloud a,
 }
 
 .pbmit-footer-style-1:before {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	content: "";
-	display: block;
-	z-index: 0;
-	/* background-image: 
-		linear-gradient(180deg, rgba(13, 26, 36, 0.94) 0%, rgba(13, 26, 36, 0.88) 50%, rgba(13, 26, 36, 0.96) 100%),
-		url(../images/convey-tech/banner-image.png); */
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	background-attachment: scroll;
+	display: none;
+	content: none;
 }
 
 .site-footer.pbmit-bg-color-blackish {
