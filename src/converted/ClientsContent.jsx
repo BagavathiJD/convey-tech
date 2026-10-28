@@ -13,12 +13,12 @@ const clients = [
   { name: 'TTK Construction', image: 'ttk-construction-logo.png' },
   { name: 'URC Construction', image: 'urc-construction-image.svg' },
   { name: 'TPK Infra', image: 'tpk-infra-logo.jpg' },
-   { name: 'Greaves Cotton Limited', image: 'client-1.png', category: 'Engineering' },
-  { name: 'Unity Infraprojects Limited', image: 'client-2.png', category: 'Infrastructure' },
-  { name: 'Vijay Nirman Company', image: 'client-3.png', category: 'Engineers & Constructors' },
-  { name: 'Saisudhir', image: 'client-4.png', category: 'Industrial Projects' },
-  { name: 'Coastal Projects Limited', image: 'client-5.png', category: 'Infrastructure' },
-  { name: 'GD', image: 'client-6.png', category: 'Industrial Partner' },
+   { name: 'Greaves Cotton Limited', image: 'client-1.png',  },
+  { name: 'Unity Infraprojects Limited', image: 'client-2.png' },
+  { name: 'Vijay Nirman Company', image: 'client-3.png' },
+  { name: 'Saisudhir', image: 'client-4.png' },
+  { name: 'Coastal Projects Limited', image: 'client-5.png', },
+  { name: 'GD', image: 'client-6.png' },
 ]
 
 export default function ClientsContent() {
