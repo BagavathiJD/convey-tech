@@ -91,8 +91,7 @@ export default function ContactContent() {
 													</div>
 													<div className="pbmit-ihbox-contents">
 														<div className="pbmit-heading-desc">
-															No.67, F2, Vaishnavi Jeswanth Apartments<br />
-															Ambattur, Chennai 600053
+															No.67, F2, Vaishnavi Jeswanth Apartments, Chozhambedu Road, Opp. Samuel Harris School, Ambattur, Chennai 600053, Tamil Nadu, India.
 														</div>
 													</div>
 												</div>

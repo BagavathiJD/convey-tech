@@ -7,7 +7,7 @@ import PneumaticCementFeedingContent from '../converted/PneumaticCementFeedingCo
 import PortableConveyorsContent from '../converted/PortableConveyorsContent'
 import BrickPlantContent from '../converted/BrickPlantContent'
 import ExportsImportsContent from '../converted/ExportsImportsContent'
-import SpecialProductsContent from '../converted/SpecialProductsContent'
+import SpecialProductsContent from '../converted/CementFlyAshSiloAutomationforBrickPlants'
 
 const productPages = {
   'machine-analysis': {

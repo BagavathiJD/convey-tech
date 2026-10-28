@@ -46,7 +46,7 @@ export default function StorageSilosContent() {
 									<p>Our storage silos are suitable for both standard and customized industrial applications, with multiple construction and discharge options available.</p>
 								</div>
 								<div className="pbmit-service-feature-image">
-									<ProductLightboxImage src="/images/convey-tech/convey-tech-img-20.jpeg" alt="Storage Silos" />
+									<ProductLightboxImage src="/images/convey-tech/storage-silos-image-1.jpeg" alt="Storage Silos" />
 								</div>
 								<div data-aos="fade-up" data-aos-duration="800">
 									<div className="pbmit-custom-heading">
@@ -125,12 +125,12 @@ export default function StorageSilosContent() {
 									<div className="row g-4">
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/storage-silos-img-2.jpeg" alt="Silo accessories — screw conveyor and fittings" />
+												<ProductLightboxImage src="/images/convey-tech/storage-silos-image-3.jpeg" alt="Silo accessories — screw conveyor and fittings" />
 											</figure>
 										</div>
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/storage-silos-img-1.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
+												<ProductLightboxImage src="/images/convey-tech/storage-silos-image-2.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
 											</figure>
 										</div>
 									</div>

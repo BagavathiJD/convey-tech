@@ -1,6 +1,14 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const galleryVideos = [
+	{ src: '/images/convey-tech/gallery-video-1.mp4', title: 'Convey Tech project video 1' },
+	{ src: '/images/convey-tech/gallery-video-2.mp4', title: 'Convey Tech project video 2' },
+]
+
 export default function PortfolioContent() {
+	const [activeTab, setActiveTab] = useState('images')
+
 	return (
 		<>
 			{/* Title Bar */}
@@ -34,6 +42,30 @@ export default function PortfolioContent() {
 				{/* Portfolio Sortable Col 3 Start */}
 				<section className="section-lg pbmit-element-portfolio-style-1 convey-tech-gallery">
 					<div className="container">
+						<div className="convey-tech-gallery-tabs" role="tablist" aria-label="Gallery media">
+							<button
+								type="button"
+								id="gallery-images-tab"
+								role="tab"
+								aria-selected={activeTab === 'images'}
+								aria-controls="gallery-images-panel"
+								className={activeTab === 'images' ? 'is-active' : ''}
+								onClick={() => setActiveTab('images')}
+							>
+								Images
+							</button>
+							<button
+								type="button"
+								id="gallery-videos-tab"
+								role="tab"
+								aria-selected={activeTab === 'videos'}
+								aria-controls="gallery-videos-panel"
+								className={activeTab === 'videos' ? 'is-active' : ''}
+								onClick={() => setActiveTab('videos')}
+							>
+								Videos
+							</button>
+						</div>
 						{/* <div className="pbmit-sortable-list">
       						<ul className="pbmit-sortable-list-ul">
       						   <li><a href="#" className="pbmit-sortable-link pbmit-selected" data-sortby="*">All</a></li>
@@ -45,7 +77,13 @@ export default function PortfolioContent() {
       						   <li><a href="#" className="pbmit-sortable-link" data-sortby="manufacture">Manufacture</a></li>
       						</ul>
       					</div> */}
-						<div className="row g-0 pbmit-element-posts-wrapper convey-tech-gallery-masonry">
+						<div
+							hidden={activeTab !== 'images'}
+							className="row g-0 pbmit-element-posts-wrapper convey-tech-gallery-masonry"
+							id="gallery-images-panel"
+							role="tabpanel"
+							aria-labelledby="gallery-images-tab"
+						>
 
 
 							<article className="pbmit-portfolio-style-1 col-md-6 col-lg-4 factory">
@@ -377,7 +415,7 @@ export default function PortfolioContent() {
 									<div className="pbminfotech-post-warpper">
 										<div className="pbmit-featured-img-wrapper">
 											<div className="pbmit-featured-wrapper">
-												<img src="/images/convey-tech/convey-tech-img-21.jpeg" className="img-fluid" alt="" />
+												<img src="/images/convey-tech/mini-cement-feeding-img-1.png" className="img-fluid" alt="" />
 											</div>
 										</div>
 										<Link className="pbmit-link" to="/portfolio"></Link>
@@ -543,7 +581,22 @@ export default function PortfolioContent() {
 								</div>
 							</article>
 
-
+						</div>
+						<div
+							hidden={activeTab !== 'videos'}
+							className="row g-4 convey-tech-gallery-videos"
+							id="gallery-videos-panel"
+							role="tabpanel"
+							aria-labelledby="gallery-videos-tab"
+						>
+							{activeTab === 'videos' && galleryVideos.map((video) => (
+								<div className="col-md-6" key={video.src}>
+									<video controls preload="metadata" playsInline aria-label={video.title}>
+										<source src={video.src} type="video/mp4" />
+										Your browser does not support the video element.
+									</video>
+								</div>
+							))}
 						</div>
 					</div>
 				</section>

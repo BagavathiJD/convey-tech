@@ -44,9 +44,21 @@ export default function PortableConveyorsContent() {
                   <p>Our conveyors provide a practical solution for moving ready-mix concrete over suitable distances while improving material handling efficiency and reducing manual movement around the plant.</p>
                   <p>Available in <b>stationary and portable configurations</b>, the conveyor systems can be designed according to your plant layout, conveying distance, site conditions, and concrete handling requirements.</p>
                 </div>
-                <div className="pbmit-service-feature-image">
-                  <ProductLightboxImage src="/images/convey-tech/convey-tech-img-22.jpeg" alt="Readymix Concrete Portable Conveyors" />
-                </div>
+                
+                <div className="pbmit-service-feature-image product-image-pair">
+                                  <div className="row g-4">
+                                    <div className="col-md-6">
+                                      <figure className="product-image-pair-item">
+                                        <ProductLightboxImage src="/images/convey-tech/ready-mix-concreat-img.jpeg" alt="Silo accessories — screw conveyor and fittings" />
+                                      </figure>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <figure className="product-image-pair-item">
+                                        <ProductLightboxImage src="/images/convey-tech/ready-mix-concreat-img-2.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
+                                      </figure>
+                                    </div>
+                                  </div>
+                                </div>
                 <div data-aos="fade-up" data-aos-duration="800">
                   <div className="pbmit-custom-heading">
                     <h3 className="pbmit-title">Why Choose Our Readymix Concrete Conveyors</h3>

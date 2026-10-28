@@ -44,20 +44,11 @@ export default function PneumaticCementFeedingContent() {
 									<p>We offer pneumatic feeding systems, manual bag feeding systems, and vertical screw conveyor feeding systems, with different capacities to meet the requirements of cement plants, RMC plants, and other material-handling applications.</p>
 									<p>Our systems are available in customized configurations based on <b>material type, feeding capacity, silo arrangement, conveying distance, and site requirements.</b></p>
 								</div>
-								<div className="pbmit-service-feature-image product-image-pair">
-									<div className="row g-4">
-										<div className="col-md-6">
-											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/cement-feeding-imge-01.jpeg" alt="Pneumatic cement feeding system" />
-											</figure>
-										</div>
-										<div className="col-md-6">
-											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/cement-feeding-imge-02.jpeg" alt="Pneumatic cement feeding equipment" />
-											</figure>
-										</div>
-									</div>
-								</div>
+
+								<div className="pbmit-service-feature-image">
+					<ProductLightboxImage src="/images/convey-tech/penumatic-cement-feeding-image.jpeg" alt="Aggregate Feeding Belt Conveyors" />
+											</div>
+								
 								<div data-aos="fade-up" data-aos-duration="800">
 									<div className="pbmit-custom-heading">
 										<h3 className="pbmit-title">Why Choose Our Pneumatic Cement Feeding Systems</h3>
@@ -125,6 +116,20 @@ export default function PneumaticCementFeedingContent() {
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
+								</div>
+								<div className="pbmit-service-feature-image product-image-pair">
+									<div className="row g-4">
+										<div className="col-md-6">
+											<figure className="product-image-pair-item">
+												<ProductLightboxImage src="/images/convey-tech/cement-feeding-imge-01.jpeg" alt="Pneumatic cement feeding system" />
+											</figure>
+										</div>
+										<div className="col-md-6">
+											<figure className="product-image-pair-item">
+												<ProductLightboxImage src="/images/convey-tech/cement-feeding-imge-02.jpeg" alt="Pneumatic cement feeding equipment" />
+											</figure>
 										</div>
 									</div>
 								</div>

@@ -2905,3 +2905,225 @@ form .form-check-input[type=checkbox] {
 .contact-us-section .contact-form.left-box .form-control:focus::placeholder {
     color: var(--pbmit-blackish-color);
 }
+
+
+/* ========================================
+   CUSTOM FOOTER
+======================================== */
+
+.custom-footer {
+  width: 100%;
+  margin: 0;
+  padding: 64px 24px 24px;
+  background: #10232e;
+  border-top: 4px solid #7fc77e;
+  color: #c5ced6;
+  box-sizing: border-box;
+}
+
+.custom-footer *,
+.custom-footer *::before,
+.custom-footer *::after {
+  box-sizing: border-box;
+}
+
+.custom-footer .footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.2fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 44px;
+}
+
+.custom-footer .footer-brand {
+  min-width: 0;
+}
+
+.custom-footer .footer-brand-name {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.custom-footer .footer-brand-name img {
+  display: block;
+  width: 175px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-footer .footer-column {
+  min-width: 0;
+}
+
+.custom-footer .footer-column h3 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.custom-footer .footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-footer .footer-column li {
+  margin: 0 0 12px;
+}
+
+.custom-footer .footer-column a,
+.custom-footer .footer-column p {
+  color: #c5ced6;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.custom-footer .footer-column a {
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.custom-footer .footer-column a:hover {
+  color: #7fc77e;
+}
+
+.custom-footer .footer-contact p {
+  margin: 0 0 12px;
+}
+
+.custom-footer .footer-contact > a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.custom-footer .footer-brand .footer-description {
+  color: #c5ced6 !important;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+  max-width: 290px;
+  overflow-wrap: break-word;
+}
+
+/* ========================================
+   BOTTOM BAR
+======================================== */
+
+.custom-footer .footer-bottom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.custom-footer .footer-bottom p {
+  color: #858f99 !important;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.custom-footer .footer-copyright {
+  text-align: left;
+  flex: 1;
+}
+
+.custom-footer .footer-credit {
+  text-align: right;
+  flex: 1;
+}
+
+.custom-footer .footer-bottom a {
+  color: #f5c518 !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.custom-footer .footer-bottom a:hover {
+  color: #ffffff !important;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+  .custom-footer .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+  }
+
+  .custom-footer .footer-brand .footer-description {
+    max-width: 320px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 576px) {
+  footer.custom-footer {
+    padding: 36px 20px 20px;
+  }
+
+  .custom-footer .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+    padding-bottom: 30px;
+  }
+
+  .custom-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .custom-footer .footer-brand-name img {
+    width: 130px;
+  }
+
+  .custom-footer .footer-brand .footer-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .custom-footer .footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .custom-footer .footer-column a,
+  .custom-footer .footer-column p {
+    font-size: 12px;
+  }
+
+  .custom-footer .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 18px;
+  }
+
+  .custom-footer .footer-copyright {
+    text-align: left;
+  }
+
+  .custom-footer .footer-credit {
+    text-align: left;
+  }
+
+  .custom-footer .footer-bottom p {
+    font-size: 11px;
+  }
+}

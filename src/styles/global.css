@@ -740,7 +740,8 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   background: #ffffff;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn {
+.contact-us-section .contact-form.left-box button.pbmit-btn,
+.contact-form button.pbmit-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -761,17 +762,23 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   width: fit-content;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-content-wrapper {
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-content-wrapper,
+.contact-form button.pbmit-btn .pbmit-button-content-wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-content-wrapper:before {
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-content-wrapper:before,
+.contact-form button.pbmit-btn .pbmit-button-content-wrapper:before,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-content-wrapper:before,
+.contact-form button.pbmit-btn:hover .pbmit-button-content-wrapper:before {
   display: none !important;
+  content: none !important;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon {
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon,
+.contact-form button.pbmit-btn .pbmit-button-icon {
   position: relative;
   left: 0 !important;
   display: inline-flex;
@@ -783,21 +790,32 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   background-color: #ffffff;
   color: var(--pbmit-blackish-color, #0d1a24);
   z-index: 2;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon i {
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon i,
+.contact-form button.pbmit-btn .pbmit-button-icon i {
   color: var(--pbmit-blackish-color, #0d1a24) !important;
   font-size: 14px;
   line-height: 1;
-  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0) !important;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon:after {
-  display: none;
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-icon:after,
+.contact-form button.pbmit-btn .pbmit-button-icon:after,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon:after,
+.contact-form button.pbmit-btn:hover .pbmit-button-icon:after {
+  display: none !important;
+  content: none !important;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-text {
+.contact-us-section .contact-form.left-box button.pbmit-btn .pbmit-button-text,
+.contact-form button.pbmit-btn .pbmit-button-text {
   color: #ffffff !important;
   text-shadow: none !important;
   font-family: var(--pbmit-btn-typography-font-family, 'Archivo', sans-serif);
@@ -808,23 +826,37 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   transition: color 0.35s ease;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn:hover {
-  background-color: var(--pbmit-global-color, #f5c518);
-  border-color: var(--pbmit-global-color, #f5c518);
+body .contact-us-section .contact-form.left-box button.pbmit-btn:hover,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover,
+body .contact-form button.pbmit-btn:hover,
+.contact-form button.pbmit-btn:hover {
+  background-color: var(--pbmit-global-color, #f5c518) !important;
+  border-color: var(--pbmit-global-color, #f5c518) !important;
   box-shadow: 0 10px 24px rgba(var(--pbmit-global-color-rgb, 245, 197, 24), 0.4);
   transform: translateY(-2px);
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon {
-  background-color: var(--pbmit-blackish-color, #0d1a24);
+body .contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon,
+body .contact-form button.pbmit-btn:hover .pbmit-button-icon,
+.contact-form button.pbmit-btn:hover .pbmit-button-icon {
+  background-color: var(--pbmit-blackish-color, #0d1a24) !important;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon i {
+body .contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon i,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-icon i,
+body .contact-form button.pbmit-btn:hover .pbmit-button-icon i,
+.contact-form button.pbmit-btn:hover .pbmit-button-icon i {
   color: #ffffff !important;
+  transform: translateX(3px) !important;
 }
 
-.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-text {
+body .contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-text,
+.contact-us-section .contact-form.left-box button.pbmit-btn:hover .pbmit-button-text,
+body .contact-form button.pbmit-btn:hover .pbmit-button-text,
+.contact-form button.pbmit-btn:hover .pbmit-button-text {
   color: var(--pbmit-blackish-color, #0d1a24) !important;
+  text-shadow: none !important;
 }
 
 /* Offices Section Cards */
@@ -1035,28 +1067,75 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   max-width: 1200px;
 }
 
+.convey-tech-gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 32px;
+}
+
+.convey-tech-gallery-tabs button {
+  min-width: 132px;
+  padding: 11px 24px;
+  border: 1px solid #dce5df;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #263e2b;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.convey-tech-gallery-tabs button:hover,
+.convey-tech-gallery-tabs button.is-active {
+  border-color: #888987;
+  background: #122231;
+  color: #ffffff;
+}
+
+.convey-tech-gallery-tabs button:focus-visible {
+  outline: 3px solid rgba(100, 173, 104, 0.35);
+  outline-offset: 3px;
+}
+
+.convey-tech-gallery [hidden] {
+  display: none !important;
+}
+
+.convey-tech-gallery-videos {
+  align-items: start;
+}
+
+.convey-tech-gallery-videos video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background: #101820;
+  object-fit: contain;
+}
+
 .convey-tech-gallery-masonry.row {
   display: block;
   margin: 0;
   column-count: 3;
-  column-gap: 14px;
+  column-gap: 12px;
 }
 
 .convey-tech-gallery-masonry.row>[class*="col-"] {
   flex: none;
   width: 100% !important;
   max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 
 .convey-tech-gallery .pbmit-portfolio-style-1 {
   display: inline-block;
   width: 100%;
   max-width: 100%;
-  float: none;
   padding: 0;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   overflow: visible;
   break-inside: avoid;
   page-break-inside: avoid;
@@ -1091,14 +1170,24 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
 .convey-tech-gallery .pbmit-portfolio-style-1 .pbmit-featured-img-wrapper,
 .convey-tech-gallery .pbmit-portfolio-style-1 .pbmit-featured-wrapper {
   height: auto;
-  overflow: visible;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.convey-tech-gallery .pbmit-portfolio-style-1 .pbminfotech-post-content {
+  border: 1px solid rgba(24, 43, 35, 0.08);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(24, 43, 35, 0.08);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.convey-tech-gallery .pbmit-portfolio-style-1:hover .pbminfotech-post-content {
+  border-color: rgba(100, 173, 104, 0.3);
+  box-shadow: 0 14px 32px rgba(24, 43, 35, 0.15);
 }
 
 .convey-tech-gallery .pbmit-portfolio-style-1 .pbmit-featured-wrapper {
-  aspect-ratio: auto;
+  background: #f4f6f5;
 }
 
 .convey-tech-gallery .pbmit-portfolio-style-1 .pbmit-featured-wrapper img,
@@ -1109,14 +1198,25 @@ body .pbmit-slider-one .pbmit-slider-cta .pbmit-button {
   max-width: 100%;
   object-fit: contain;
   object-position: center;
-  border-radius: 0;
-  transform: none;
+  border-radius: 16px;
+  transform: scale(1);
   transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.convey-tech-gallery .pbmit-portfolio-style-1:hover .pbmit-featured-wrapper img {
+  transform: scale(1.035);
 }
 
 @media (max-width: 991.98px) {
   .convey-tech-gallery-masonry.row {
     column-count: 2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .convey-tech-gallery-masonry.row {
+    column-count: 1;
   }
 }
 
@@ -1326,8 +1426,7 @@ body .pbmit-btn.white,
 body .pbmit-btn.blackish,
 body .pbmit-slider-one .pbmit-button .pbmit-btn.white,
 body .pbmit-slider-two .pbmit-button .pbmit-btn.white,
-body .team-section-two .team-btn-bg .pbmit-btn.white,
-body .contact-us-section .contact-form.left-box button.pbmit-btn {
+body .team-section-two .team-btn-bg .pbmit-btn.white {
   background-color: var(--pbmit-blackish-color);
   color: #ffffff;
   border-radius: 10px;
@@ -1585,6 +1684,22 @@ a.product-lightbox-link img {
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
+}
+
+.service-details .pbmit-service-feature-image:not(.product-image-pair) {
+  aspect-ratio: 4 / 3;
+  margin: 20px 0 42px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-details .pbmit-service-feature-image:not(.product-image-pair) img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
 }
 
 @media (max-width: 767.98px) {

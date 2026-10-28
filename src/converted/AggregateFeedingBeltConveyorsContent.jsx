@@ -57,7 +57,7 @@ export default function AggregateFeedingBeltConveyorsContent() {
 									<p>We are supplying <b>READYMIX CONCRETE CONVEYORS</b> to Batching Plant from output of Plant to Transit Mixer</p>
 								</div>
 								<div className="pbmit-service-feature-image">
-									<ProductLightboxImage src="/images/convey-tech/aggrigate-feeding-belt-image.png" alt="Aggregate Feeding Belt Conveyors" />
+									<ProductLightboxImage src="/images/convey-tech/aggregate-feeding-belt-image-1.png" alt="Aggregate Feeding Belt Conveyors" />
 								</div>
 								<div data-aos="fade-up" data-aos-duration="800">
 									<div className="pbmit-custom-heading">
@@ -133,12 +133,12 @@ export default function AggregateFeedingBeltConveyorsContent() {
 									<div className="row g-4">
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-1.jpeg" alt="Silo accessories — screw conveyor and fittings" />
+												<ProductLightboxImage src="/images/convey-tech/aggregate-feeding-belt-image-2.png" alt="Silo accessories — screw conveyor and fittings" />
 											</figure>
 										</div>
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-33.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
+												<ProductLightboxImage src="/images/convey-tech/aggregate-feeding-belt-image-3.png" alt="Silo accessories — valves, filters, and discharge equipment" />
 											</figure>
 										</div>
 									</div>

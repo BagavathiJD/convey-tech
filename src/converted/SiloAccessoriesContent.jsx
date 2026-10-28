@@ -46,20 +46,11 @@ export default function SiloAccessoriesContent() {
 									<p>Our range includes screw conveyors, silo top and bottom filters, butterfly valves, level indicators, aeration systems, vibrating motors, and pressure relief valves for cement, fly ash, limestone, and other bulk-material storage applications.</p>
 									<p>The accessories are available in different sizes and configurations to suit silo capacity, material characteristics, conveying requirements, and plant layout.</p>
 								</div>
-								<div className="pbmit-service-feature-image product-image-pair">
-									<div className="row g-4">
-										<div className="col-md-6">
-											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-1.jpeg" alt="Silo accessories — screw conveyor and fittings" />
-											</figure>
-										</div>
-										<div className="col-md-6">
-											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-33.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
-											</figure>
-										</div>
-									</div>
-								</div>
+
+								<div className="pbmit-service-feature-image">
+																	<ProductLightboxImage src="/images/convey-tech/accoceries-image.jpeg" alt="Aggregate Feeding Belt Conveyors" />
+																</div>
+								
 								<div data-aos="fade-up" data-aos-duration="800">
 									<div className="pbmit-custom-heading">
 										<h3 className="pbmit-title">Why Choose Our Silo Accessories</h3>
@@ -127,6 +118,20 @@ export default function SiloAccessoriesContent() {
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
+								</div>
+								<div className="pbmit-service-feature-image product-image-pair">
+									<div className="row g-4">
+										<div className="col-md-6">
+											<figure className="product-image-pair-item">
+												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-1.jpeg" alt="Silo accessories — screw conveyor and fittings" />
+											</figure>
+										</div>
+										<div className="col-md-6">
+											<figure className="product-image-pair-item">
+												<ProductLightboxImage src="/images/convey-tech/convey-tech-img-33.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
+											</figure>
 										</div>
 									</div>
 								</div>

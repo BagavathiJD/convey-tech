@@ -10,16 +10,22 @@ export default function ServicesContent() {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title"> Products</h1>
+                  <h1 className="pbmit-tbar-title">Products</h1>
                 </div>
               </div>
               <div className="pbmit-breadcrumb">
                 <div className="pbmit-breadcrumb-inner">
                   <span>
-                    <a title="" href="#" className="home"><span>Home</span></a>
+                    <Link to="/" className="home">
+                      <span>Home</span>
+                    </Link>
                   </span>
                   <span className="sep"></span>
-                  <span><span className="post-root post post-post current-item"> Products</span></span>
+                  <span>
+                    <span className="post-root post post-post current-item">
+                      Products
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -34,17 +40,25 @@ export default function ServicesContent() {
               {products.map((product, index) => {
                 const to = getProductPath(product)
                 const imageIndex = String(index + 1).padStart(2, '0')
+
                 return (
-                  <article className="pbmit-service-style-1 col-md-6 col-lg-4" key={product.slug}>
+                  <article
+                    className="pbmit-service-style-1 col-md-6 col-lg-4"
+                    key={product.slug}
+                  >
                     <div className="pbminfotech-post-item">
                       <div className="pbmit-box-content-wrap">
                         <div className="pbmit-image-wrap">
                           <div className="pbmit-featured-img-wrapper">
                             <div className="pbmit-featured-wrapper">
-                              <img src={product.listingImage || `/images/service/service-${imageIndex}.jpg`} className="img-fluid" alt={product.title} />
+                              <img
+                                src={product.listingImage || `/images/service/service-${imageIndex}.jpg`}
+                                className="img-fluid"
+                                alt={product.title}
+                              />
                             </div>
                           </div>
-                          <Link className="pbmit-link" to={to}></Link>
+                          <Link className="pbmit-link" to={to} aria-label={product.title}></Link>
                         </div>
                         <div className="pbmit-service-content-wrap">
                           <h3 className="pbmit-service-title">
@@ -61,7 +75,7 @@ export default function ServicesContent() {
                               </Link>
                             </div>
                           </div>
-                          <Link className="pbmit-link" to={to}></Link>
+                          <Link className="pbmit-link" to={to} aria-label={product.title}></Link>
                         </div>
                       </div>
                     </div>

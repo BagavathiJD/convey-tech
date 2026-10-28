@@ -83,7 +83,7 @@ export default function HomeContent() {
 						{/* Slide3 */}
 						<div className="swiper-slide">
 							<div className="pbmit-slider-item">
-								<div className="pbmit-slider-bg" style={{ backgroundImage: "url(/images/banner-slider-img/banner-image-03.png)" }}></div>
+								<div className="pbmit-slider-bg" style={{ backgroundImage: "url(/images/convey-tech/banner-3.png)" }}></div>
 								<div className="container">
 									<div className="pbmit-slider-content ct-slider-box">
 										<h5 className="pbmit-slider-subtitle transform-left transform-delay-1">
@@ -124,7 +124,7 @@ export default function HomeContent() {
 						<div className="row g-4 g-xl-5 align-items-stretch home-about-row">
 							<div className="col-lg-5 home-about-media-col">
 								<div className="home-about-media">
-									<img src="/images/banner-slider-img/abt-img-1.png" alt="Convey Tech manufacturing and material handling" />
+									<img src="/images/convey-tech/convey-tech-img-29.jpeg" alt="Convey Tech manufacturing and material handling" />
 									<div className="home-about-media-badge">
 										<span className="home-about-media-badge-num">25+</span>
 										<span className="home-about-media-badge-label">Years of Industrial Expertise</span>
@@ -338,152 +338,6 @@ export default function HomeContent() {
 
 
 
-
-			{/* Testimonial Start */}
-			<section className="ct-testimonials fade-section">
-				<div className="container-fluid">
-					<header className="ct-testimonials-header">
-						<div className="pbmit-heading-subheading text-center">
-							<h4 className="pbmit-subtitle">Client Stories</h4>
-							<h2 className="pbmit-title">Trusted on site, <em>built to last.</em></h2>
-							<div className="pbmit-heading-desc">
-								Plant operators and project teams across India rely on Convey Tech for conveying and storage systems that keep production moving.
-							</div>
-						</div>
-						<div className="ct-testimonials-arrow"></div>
-					</header>
-
-					<div
-						className="swiper-slider ct-testimonials-slider"
-						data-autoplay="true"
-						data-loop="true"
-						data-dots="false"
-						data-arrows="true"
-						data-arrows-class="ct-testimonials-arrow"
-						data-center="true"
-						data-columns="3"
-						data-margin="24"
-						data-effect="slide"
-					>
-						<div className="swiper-wrapper">
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“Convey Tech engineered our aggregate feeding line to fit a tight plant layout. Installation was smooth and downtime dropped immediately.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Stephen Welch</strong>
-										</div>
-									</footer>
-								</div>
-							</article>
-
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“From silo supply to erection support, their team delivered a complete turnkey solution. Quality, communication, and on-site execution were excellent.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Anna Briggs</strong>
-										</div>
-									</footer>
-								</div>
-							</article>
-
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“We needed reliable cement feeding with zero compromise on safety. Convey Tech customized the system for our capacity and site constraints.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Jonathan Adams</strong>
-
-										</div>
-									</footer>
-								</div>
-							</article>
-
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“Their portable conveyors helped us move material faster across the batching area. Durable build and practical design for daily site use.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Hazel Jenkins</strong>
-
-										</div>
-									</footer>
-								</div>
-							</article>
-
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“Clear engineering support and dependable manufacturing. Our storage silo project was completed to spec and ready for production.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Adeline Wood</strong>
-										</div>
-									</footer>
-								</div>
-							</article>
-
-							<article className="swiper-slide">
-								<div className="ct-testimonial-card">
-									<span className="ct-testimonial-quote" aria-hidden="true">”</span>
-									<div className="ct-testimonial-stars" aria-label="5 star rating">
-										<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-									</div>
-									<blockquote>
-										“A reliable partner for industrial material handling. They understood our plant constraints and delivered systems that perform every day.”
-									</blockquote>
-									<footer className="ct-testimonial-author">
-										<div>
-											<strong>Naomi Violet</strong>
-										</div>
-									</footer>
-								</div>
-							</article>
-						</div>
-					</div>
-
-					<div className="ct-testimonials-footer">
-						<p className="pbmit-heading-desc">“Reliable systems. Practical engineering. Partners who understand plant reality.”</p>
-						<Link to="/about" className="ct-testimonials-link">
-							View more client stories
-							<span aria-hidden="true">→</span>
-						</Link>
-					</div>
-				</div>
-			</section>
-			{/* Testimonial End */}
-
-
 			{/* Accordion Start */}
 			<section className="accordion-section-one pbmit-bg-color-light fade-section">
 				<div className="container-fluid p-0">
@@ -509,7 +363,7 @@ export default function HomeContent() {
 													<button className="accordion-button" type="button" data-bs-toggle="collapse"
 														data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
 														<span className="pbmit-accordion-title">
-															01. What products does ConveyTech Group manufacture and supply?
+															01. What products does ConveyTech Groups manufacture and supply?
 														</span>
 														<span className="pbmit-accordion-icon">
 															<span className="pbmit-accordion-icon-opened">
