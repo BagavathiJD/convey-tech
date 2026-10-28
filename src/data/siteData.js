@@ -52,6 +52,6 @@ export const navItems = [
     /*children: [{ label: '', to: '/portfolio' }],*/
   },
   { label: 'Clients', to: '/clients' },
-  { label: 'Projects', to: '/projects' },
+  // { label: 'Projects', to: '/projects' },
   { label: 'Contact Us', to: '/contact' },
 ]
