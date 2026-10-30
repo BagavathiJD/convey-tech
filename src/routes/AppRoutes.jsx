@@ -13,6 +13,7 @@ import Portfolio from '../pages/Portfolio'
 import Clients from '../pages/Clients'
 import Projects from '../pages/Projects'
 import Faq from '../pages/Faq'
+import BrochureViewer from '../pages/BrochureViewer'
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,7 @@ export default function AppRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetails />} />
         <Route path="/products/:slug" element={<ServiceDetails />} />
+        <Route path="/brochures/view/:slug" element={<BrochureViewer />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/clients" element={<Clients />} />
