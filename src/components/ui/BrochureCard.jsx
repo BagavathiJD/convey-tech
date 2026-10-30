@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import * as pdfjsLib from 'pdfjs-dist'
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker
+import { pdfjsLib } from '../../lib/pdfjs'
 
 export default function BrochureCard({ file, title, size, pages = '1 page' }) {
   const canvasRef = useRef(null)
@@ -12,7 +9,6 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
   const path = `/images/convey-tech/${file}`
   const viewSlug = file.replace(/\.pdf$/i, '')
   const viewTo = `/brochures/view/${viewSlug}`
-
 
   useEffect(() => {
     let cancelled = false
@@ -72,19 +68,10 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
         </span>
       </div>
       <div className="ct-brochure-doc-actions">
-        <Link
-          className="ct-brochure-btn ct-brochure-btn--view"
-          to={viewTo}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="ct-brochure-btn ct-brochure-btn--view" to={viewTo}>
           View
         </Link>
-        <a
-          className="ct-brochure-btn ct-brochure-btn--download"
-          href={path}
-          download={file}
-        >
+        <a className="ct-brochure-btn ct-brochure-btn--download" href={path} download={file}>
           Download
         </a>
       </div>

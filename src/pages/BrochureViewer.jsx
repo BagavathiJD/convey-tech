@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import * as pdfjsLib from 'pdfjs-dist'
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
+import { pdfjsLib } from '../lib/pdfjs'
 import Seo from '../components/common/Seo'
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker
 
 const ALLOWED = {
   'catlog-1': {
@@ -36,7 +33,6 @@ export default function BrochureViewer() {
     }
 
     let cancelled = false
-    const urls = []
 
     const load = async () => {
       try {
@@ -57,9 +53,7 @@ export default function BrochureViewer() {
           canvas.width = Math.floor(viewport.width)
           canvas.height = Math.floor(viewport.height)
           await page.render({ canvasContext: context, viewport }).promise
-          const url = canvas.toDataURL('image/jpeg', 0.92)
-          urls.push(url)
-          rendered.push(url)
+          rendered.push(canvas.toDataURL('image/jpeg', 0.92))
         }
         if (!cancelled) setPages(rendered)
       } catch {
