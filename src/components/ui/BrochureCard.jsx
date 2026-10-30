@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { pdfjsLib } from '../../lib/pdfjs'
+import * as pdfjsLib from 'pdfjs-dist'
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker
 
 export default function BrochureCard({ file, title, size, pages = '1 page' }) {
   const canvasRef = useRef(null)
   const [ready, setReady] = useState(false)
   const [failed, setFailed] = useState(false)
   const path = `/images/convey-tech/${file}`
-  const viewSlug = file.replace(/\.pdf$/i, '')
-  const viewTo = `/brochures/view/${viewSlug}`
+  const src = typeof window !== 'undefined' ? new URL(path, window.location.origin).href : path
 
   useEffect(() => {
     let cancelled = false
@@ -68,10 +69,19 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
         </span>
       </div>
       <div className="ct-brochure-doc-actions">
-        <Link className="ct-brochure-btn ct-brochure-btn--view" to={viewTo}>
+        <a
+          className="ct-brochure-btn ct-brochure-btn--view"
+          href={src}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           View
-        </Link>
-        <a className="ct-brochure-btn ct-brochure-btn--download" href={path} download={file}>
+        </a>
+        <a
+          className="ct-brochure-btn ct-brochure-btn--download"
+          href={src}
+          download={file}
+        >
           Download
         </a>
       </div>
