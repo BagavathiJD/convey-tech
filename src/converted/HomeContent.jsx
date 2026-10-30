@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getProductPath, products } from '../data/products'
 
@@ -10,8 +11,28 @@ const homeServiceImages = [
 	'/images/homepage-1/service/service-img-06.jpg',
 ]
 
+const brochures = [
+	{ file: 'catlog-1.pdf', title: 'Product Catalogue 01', size: '1.3 MB' },
+	{ file: 'catlog-2.pdf', title: 'Product Catalogue 02', size: '1.3 MB' },
+	{ file: 'catlog-3.pdf', title: 'Product Catalogue 03', size: '1.2 MB' },
+]
 
 export default function HomeContent() {
+	const [activeBrochure, setActiveBrochure] = useState(null)
+
+	useEffect(() => {
+		if (!activeBrochure) return undefined
+		const onKeyDown = (event) => {
+			if (event.key === 'Escape') setActiveBrochure(null)
+		}
+		document.body.style.overflow = 'hidden'
+		window.addEventListener('keydown', onKeyDown)
+		return () => {
+			document.body.style.overflow = ''
+			window.removeEventListener('keydown', onKeyDown)
+		}
+	}, [activeBrochure])
+
 	return (
 		<>
 
@@ -21,7 +42,7 @@ export default function HomeContent() {
 						{/* Slide1 */}
 						<div className="swiper-slide">
 							<div className="pbmit-slider-item">
-								<div className="pbmit-slider-bg" style={{ backgroundImage: "url(/images/banner-slider-img/banner-image-01.png)" }}></div>
+								<div className="pbmit-slider-bg" style={{ backgroundImage: "url(/images/banner-slider-img/banner-4.png)" }}></div>
 								<div className="container">
 									<div className="pbmit-slider-content ct-slider-box">
 										<h5 className="pbmit-slider-subtitle transform-left transform-delay-1">
@@ -303,7 +324,78 @@ export default function HomeContent() {
 			</section>
 			{/* Service End */}
 
-
+			{/* Brochures Start */}
+			<section className="ct-brochures fade-section" data-aos="fade-up" data-aos-duration="800">
+				<div className="container">
+					<div className="pbmit-heading-subheading text-center">
+						<h4 className="pbmit-subtitle">Brochures</h4>
+						<h2 className="pbmit-title">View Our Product Catalogues</h2>
+						<div className="pbmit-heading-desc">
+							Explore our product range in detail — conveyors, silos, feeding systems, and plant equipment.
+						</div>
+					</div>
+					<div className="row g-4 ct-brochures-grid">
+						{brochures.map((item) => {
+							const src = `/images/convey-tech/${item.file}`
+							return (
+								<div className="col-md-4" key={item.file}>
+									<button
+										type="button"
+										className="ct-brochure-card"
+										onClick={() => setActiveBrochure({ ...item, src })}
+									>
+										<span className="ct-brochure-preview" aria-hidden="true">
+											<iframe
+												src={`${src}#page=1&toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&view=FitH`}
+												title=""
+												tabIndex={-1}
+												loading="lazy"
+											/>
+											<span className="ct-brochure-preview-shade"></span>
+											<span className="ct-brochure-preview-badge">PDF</span>
+										</span>
+										<span className="ct-brochure-meta">
+											<span className="ct-brochure-label">PDF Brochure</span>
+											<strong className="ct-brochure-title">{item.title}</strong>
+											<span className="ct-brochure-size">{item.size}</span>
+										</span>
+										<span className="ct-brochure-action">View Brochure</span>
+									</button>
+								</div>
+							)
+						})}
+					</div>
+				</div>
+			</section>
+			{activeBrochure ? (
+				<div
+					className="ct-brochure-viewer"
+					role="dialog"
+					aria-modal="true"
+					aria-label={activeBrochure.title}
+					onClick={() => setActiveBrochure(null)}
+				>
+					<div className="ct-brochure-viewer-panel" onClick={(event) => event.stopPropagation()}>
+						<div className="ct-brochure-viewer-bar">
+							<strong>{activeBrochure.title}</strong>
+							<div className="ct-brochure-viewer-actions">
+								<a href={activeBrochure.src} target="_blank" rel="noopener noreferrer">
+									Open in new tab
+								</a>
+								<button type="button" onClick={() => setActiveBrochure(null)} aria-label="Close brochure viewer">
+									Close
+								</button>
+							</div>
+						</div>
+						<iframe
+							src={`${activeBrochure.src}#toolbar=1&navpanes=0`}
+							title={activeBrochure.title}
+							className="ct-brochure-viewer-frame"
+						/>
+					</div>
+				</div>
+			) : null}
+			{/* Brochures End */}
 
 			{/* Stats Start */}
 			<section className="about-metrics fade-section">

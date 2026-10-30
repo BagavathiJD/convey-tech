@@ -67,7 +67,7 @@ export default function AboutContent() {
 							</div>
 
 							<div className="about-story-media">
-								<img src="/images/convey-tech/about-page-image.png" alt="Convey Tech manufacturing and material handling" />
+								<img src="/images/convey-tech/about-us-image.jpeg" alt="Convey Tech manufacturing and material handling" />
 								<div className="about-story-media-note">
 									<span>25+</span>
 									<em>Years building industrial systems</em>

@@ -3,27 +3,27 @@ export const products = [
     slug: 'aggregate-feeding-belt-conveyors',
     aliases: ['machine-analysis'],
     title: 'Aggregate Feeding Belt Conveyors',
-    listingImage: '/images/convey-tech/slider-img-3.png',
+    listingImage: '/images/convey-tech/aggregate-feeding-belt-image-1.png',
     listingDesc: 'Belt conveyors for sand, jally, and stone feeding to RMC batching plants.',
     custom: 'conveyor',
   },
   {
     slug: 'storage-silos',
-    title: 'Storage Silos',
-    listingImage: '/images/convey-tech/convey-tech-img-20.jpeg',
+    title: 'Horizondal & Vertical Cement/Flyash/Lime Powder Storage Silos',
+    listingImage: '/images/convey-tech/storage-silos-image-1.jpeg',
     listingDesc: 'Cement and flyash storage silos for RMC plants, sized to site capacity.',
     custom: 'silos',
   },
   {
     slug: 'silo-accessories',
     title: 'Silo Accessories',
-    listingImage: '/images/convey-tech/convey-tech-img-1.jpeg',
+    listingImage: '/images/convey-tech/accoceries-image.jpeg',
     listingDesc: 'Screw conveyors, filters, valves, and aeration systems for storage silos.',
   },
   {
     slug: 'pneumatic-cement-feeding-systems',
     title: 'Pneumatic Cement Feeding Systems',
-    listingImage: '/images/convey-tech/convey-tech-img-33.jpeg',
+    listingImage: '/images/convey-tech/penumatic-cement-feeding-image.jpeg',
     listingDesc: 'Pneumatic systems for dust-free cement transfer from silo to plant.',
     paragraphs: [
       'We design, manufacture, and supply <b>Pneumatic Cement Feeding Systems</b> for transferring cement and flyash from storage silos to RMC batching plants. Systems are matched to plant capacities from 18 M³ to 300 M³ and to leading brands such as Schwing Stetter, Greaves, Simem, Akona, Apollo, Conmat, Aquarius, Maxmech, Macons, and Penta.',
@@ -53,7 +53,7 @@ export const products = [
   {
     slug: 'readymix-concrete-portable-conveyors',
     title: 'Readymix Concrete Portable Conveyors',
-    listingImage: '/images/convey-tech/convey-tech-img-32.jpeg',
+    listingImage: '/images/convey-tech/ready-mix-concreat-img.jpeg',
     listingDesc: 'Portable conveyors from batching plant output to the transit mixer.',
     paragraphs: [
       'We manufacture <b>Readymix Concrete Portable Conveyors</b> to move concrete from the batching plant discharge to the transit mixer. These conveyors are built for site mobility, quick positioning, and continuous pours.',
@@ -82,8 +82,8 @@ export const products = [
   },
   {
     slug: 'brick-plant-mini-cement-plant',
-    title: 'Brick Plant / Mini Cement Plant',
-    listingImage: '/images/convey-tech/convey-tech-img-25.jpeg',
+    title: '2/3/4 Bin Batching Plant For Flyask Brick Plant / AAC Brick Plant',
+    listingImage: '/images/convey-tech/mini-cement-feeding-img-3.png',
     listingDesc: 'Feeding and handling systems for brick plants and mini cement plants.',
     paragraphs: [
       'We design and supply feeding and handling equipment for <b>Brick Plants and Mini Cement Plants</b>, including flyash brick units and hollow block-making plants. Conveyors, silos, and feeders are sized to each plant’s layout and output.',
@@ -111,69 +111,40 @@ export const products = [
     ],
   },
   {
-    slug: 'exports-imports',
-    title: 'Exports / Imports',
-    listingImage: '/images/convey-tech/export-image.png',
-    listingDesc: 'Export and import of conveyors, silos, and related plant equipment.',
+    slug: 'cement-flyash-silo-automation-for-brick-plant',
+    aliases: ['special-products'],
+    title: 'Cement & Flyash Silo Automation for Brick Plant',
+    listingImage: '/images/special-product-image.png',
+    listingDesc: 'Automated cement and flyash silo systems for brick plant operations.',
     paragraphs: [
-      'Convey Tech supplies <b>conveyors, silos, and feeding systems</b> for export and handles related import of components required for plant equipment. Packing, documentation, and dispatch are arranged for overseas and domestic project sites.',
-      'Equipment is manufactured to the same structural standards used for Indian RMC plants — <b>VSP, SSP, TATA, and JINDAL</b> steel with standard-make drives and accessories.',
+      'We design and supply <b>Cement & Flyash Silo Automation</b> for brick plants — level control, feeding, and discharge systems matched to press and mixer demand.',
+      'Equipment uses <b>VSP, SSP, TATA, and JINDAL</b> structural steel with standard-make drives and automation components.',
     ],
-    whyTitle: 'Why Choose Convey Tech for Exports / Imports',
-    whyIntro: 'Project sites outside the local market still need the same heavy-duty feeding equipment. We pack and document consignments for delivery.',
+    whyTitle: 'Why Choose Our Silo Automation for Brick Plants',
+    whyIntro: 'Brick plants need reliable cement and flyash feed. Our automated silo systems keep material flowing to the mixer without stoppages.',
     highlights: [
-      { title: 'Export Packing', desc: 'Knock-down packing, marking, and documentation for conveyors, silos, and accessories.' },
-      { title: 'Same Build Quality', desc: 'Export equipment uses the same steel and drive specifications as our domestic supply.' },
-      { title: 'Component Imports', desc: 'Standard-make bought-outs can be sourced and fitted to match the destination plant.' },
-      { title: 'Project Coordination', desc: 'We work with the buyer on drawings, packing lists, and dispatch schedules.' },
+      { title: 'Plant Automation', desc: 'Level indicators, valves, and feeders coordinated for continuous brick production.' },
+      { title: 'Cement & Flyash Ready', desc: 'Designed for cement and flyash storage and discharge on brick plant sites.' },
+      { title: 'Heavy-Duty Build', desc: 'Same structural steel standards as our conveyors and storage silos.' },
+      { title: 'Matched to Layout', desc: 'Automation and piping arranged around your mixer, press, and silo positions.' },
     ],
-    listTitle: 'What our export / import support includes',
+    listTitle: 'What our brick plant silo automation includes',
     listItems: [
-      'Supply of belt conveyors, silos, and pneumatic feeding systems for overseas sites.',
-      'Packing lists, marking, and dispatch coordination.',
-      'Drawings and specifications for the receiving plant.',
-      'Sourcing of standard-make components where required.',
+      'Cement and flyash silo feeding and discharge automation.',
+      'Level indicators, valves, and aeration as required.',
+      'Layouts matched to brick / AAC plant mixers and presses.',
+      'Fabrication, supply, and commissioning support.',
     ],
     faqs: [
-      { q: '01. Do you export complete conveyors and silos?', a: 'Yes. Units can be supplied assembled or in knock-down form depending on freight and site erection.' },
-      { q: '02. Can you follow the buyer’s packing specification?', a: 'Yes. Packing and marking can follow the project or freight-forwarder specification.' },
-      { q: '03. Do you support erection after arrival?', a: 'Erection guidance and commissioning support can be arranged as agreed for the project.' },
-    ],
-  },
-  {
-    slug: 'special-products',
-    title: 'Special Products',
-    listingImage: '/images/convey-tech/special-product-image.jpg',
-    listingDesc: 'Custom conveyors, hoppers, and feeding equipment built to site requirement.',
-    paragraphs: [
-      'Alongside standard conveyors and silos, we manufacture <b>Special Products</b> — custom hoppers, chutes, feeders, and handling equipment designed around a specific plant or site constraint.',
-      'These items use the same <b>VSP, SSP, TATA, and JINDAL</b> structural steel and heavy-duty rollers or fabricated parts as our main product lines.',
-    ],
-    whyTitle: 'Why Choose Our Special Products',
-    whyIntro: 'When a standard conveyor or silo will not fit the layout, we design a one-off solution that still matches plant duty.',
-    highlights: [
-      { title: 'Built to Drawing', desc: 'Hoppers, chutes, frames, and feeders are fabricated to site measurements and approved drawings.' },
-      { title: 'Same Steel Standards', desc: 'Special items use the same mill steel and workmanship as our conveyors and silos.' },
-      { title: 'Plant Integration', desc: 'Custom equipment is designed to connect with existing batching, brick, or cement lines.' },
-      { title: 'One Source', desc: 'Specials can be supplied with conveyors and silos so interfaces are coordinated.' },
-    ],
-    listTitle: 'Typical special products',
-    listItems: [
-      'Custom hoppers, chutes, and bin modifications.',
-      'Non-standard conveyor lengths, widths, and support frames.',
-      'Site-specific feeders and transfer points.',
-      'Fabricated accessories to suit an existing plant.',
-    ],
-    faqs: [
-      { q: '01. How do we start a special product enquiry?', a: 'Share the site layout, duty, and any existing drawings. We propose a fabrication design for approval.' },
-      { q: '02. Can you match an existing machine interface?', a: 'Yes. We take measurements or OEM details and fabricate the connecting equipment to suit.' },
-      { q: '03. Are specials only one-off?', a: 'Most are one-off, but a proven special can be repeated for additional plants if required.' },
+      { q: '01. Can this be fitted to an existing brick plant?', a: 'Yes. We survey the silo and mixer layout, then design automation around the existing plant.' },
+      { q: '02. Do you supply the complete package?', a: 'Yes. Silo accessories, feeders, and controls can be supplied as a matched automation package.' },
+      { q: '03. Which materials are supported?', a: 'Cement and flyash are primary. Other powders can be reviewed against particle size and site conditions.' },
     ],
   },
 ]
 
 export function getProductPath(product) {
-  return `/services/${product.slug}`
+  return `/products/${product.slug}`
 }
 
 export function getProductBySlug(slug) {

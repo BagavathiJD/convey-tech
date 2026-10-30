@@ -21,8 +21,8 @@ const productPages = {
     Content: AggregateFeedingBeltConveyorsContent,
   },
   'storage-silos': {
-    title: 'Storage Silos',
-    description: 'Cement and flyash storage silos for RMC batching plants.',
+    title: 'Horizondal & Vertical Cement/Flyash/Lime Powder Storage Silos',
+    description: 'Cement, flyash, and lime powder storage silos for RMC batching plants.',
     Content: StorageSilosContent,
   },
   'silo-accessories': {
@@ -41,8 +41,8 @@ const productPages = {
     Content: PortableConveyorsContent,
   },
   'brick-plant-mini-cement-plant': {
-    title: 'Brick Plant / Mini Cement Plant',
-    description: 'Feeding systems for brick plants and mini cement plants.',
+    title: '2/3/4 Bin Batching Plant For Flyask Brick Plant / AAC Brick Plant',
+    description: 'Feeding systems for flyash brick plants and AAC brick plants.',
     Content: BrickPlantContent,
   },
   'exports-imports': {
@@ -51,8 +51,13 @@ const productPages = {
     Content: ExportsImportsContent,
   },
   'special-products': {
-    title: 'Special Products',
-    description: 'Custom hoppers, chutes, and special fabrications for plant sites.',
+    title: 'Cement & Flyash Silo Automation for Brick Plant',
+    description: 'Automated cement and flyash silo systems for brick plant operations.',
+    Content: SpecialProductsContent,
+  },
+  'cement-flyash-silo-automation-for-brick-plant': {
+    title: 'Cement & Flyash Silo Automation for Brick Plant',
+    description: 'Automated cement and flyash silo systems for brick plant operations.',
     Content: SpecialProductsContent,
   },
 }

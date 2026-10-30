@@ -47,7 +47,7 @@ In fly ash brick plants and cement block manufacturing plants, cement and fly as
 									
       							</div>
       							{/* <div className="pbmit-service-feature-image">
-      								<ProductLightboxImage src="/images/convey-tech/special-product-image.png" alt="Mobile Portable Belt Conveyor" />
+      								<ProductLightboxImage src="/images/special-product-image.png" alt="Mobile Portable Belt Conveyor" />
       							</div>*/}
 
 

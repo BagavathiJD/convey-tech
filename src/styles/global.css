@@ -3524,6 +3524,260 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
 }
 
 /* ==========================================================================
+   HOME BROCHURES / CATALOGUES
+   ========================================================================== */
+.ct-brochures {
+  padding: 90px 0;
+  background: #0d1a24;
+  color: #ffffff;
+}
+
+.ct-brochures .pbmit-heading-subheading {
+  margin-bottom: 48px;
+}
+
+.ct-brochures .pbmit-subtitle {
+  color: var(--pbmit-global-color, #f5c518);
+}
+
+.ct-brochures .pbmit-title {
+  color: #ffffff;
+}
+
+.ct-brochures .pbmit-heading-desc {
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ct-brochure-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-align: left;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.ct-brochure-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(var(--pbmit-global-color-rgb, 245, 197, 24), 0.55);
+  transform: translateY(-4px);
+  color: inherit;
+}
+
+.ct-brochure-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 340px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f4f5f7;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.ct-brochure-preview iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #f4f5f7;
+  transform: scale(1.02);
+  transform-origin: top center;
+  filter: saturate(0.95) contrast(0.98) brightness(0.98);
+  opacity: 0.88;
+}
+
+.ct-brochure-preview-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(13, 26, 36, 0.08) 0%, rgba(13, 26, 36, 0.02) 35%, rgba(13, 26, 36, 0.35) 100%);
+  pointer-events: none;
+}
+
+.ct-brochure-preview-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: var(--pbmit-global-color, #f5c518);
+  color: #0d1a24;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ct-brochure-card:hover .ct-brochure-preview iframe {
+  opacity: 1;
+  filter: none;
+}
+
+.ct-brochure-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 0 6px;
+}
+
+.ct-brochure-label {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pbmit-global-color, #f5c518);
+}
+
+.ct-brochure-title {
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.ct-brochure-size {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ct-brochure-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 120px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--pbmit-global-color, #f5c518);
+  color: #0d1a24;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ct-brochure-card:hover .ct-brochure-action {
+  background: #ffffff;
+  color: #0d1a24;
+}
+
+.ct-brochure-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(13, 26, 36, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.ct-brochure-viewer-panel {
+  width: min(1100px, 100%);
+  height: min(860px, calc(100vh - 48px));
+  display: flex;
+  flex-direction: column;
+  background: #0d1a24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.ct-brochure-viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background: #16222d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ct-brochure-viewer-bar strong {
+  color: #ffffff;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 16px;
+}
+
+.ct-brochure-viewer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.ct-brochure-viewer-actions a,
+.ct-brochure-viewer-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 0;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ct-brochure-viewer-actions a {
+  background: transparent;
+  color: var(--pbmit-global-color, #f5c518);
+  border: 1px solid rgba(var(--pbmit-global-color-rgb, 245, 197, 24), 0.45);
+}
+
+.ct-brochure-viewer-actions button {
+  background: var(--pbmit-global-color, #f5c518);
+  color: #0d1a24;
+}
+
+.ct-brochure-viewer-frame {
+  width: 100%;
+  flex: 1;
+  border: 0;
+  background: #f4f5f7;
+}
+
+@media (max-width: 767.98px) {
+  .ct-brochures {
+    padding: 70px 0;
+  }
+
+  .ct-brochure-viewer {
+    padding: 12px;
+  }
+
+  .ct-brochure-viewer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
    CONVEYTECH FOOTER BACKGROUND & OVERLAY
    ========================================================================== */
 .site-footer {
