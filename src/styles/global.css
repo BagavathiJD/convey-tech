@@ -3844,17 +3844,13 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
   border-radius: 14px;
   background: #1a2732;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  text-decoration: none !important;
-  color: inherit !important;
-  -webkit-tap-highlight-color: transparent;
+  color: inherit;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.ct-brochure-doc:hover,
-.ct-brochure-doc:focus-visible {
+.ct-brochure-doc:hover {
   transform: translateY(-4px);
   border-color: rgba(var(--pbmit-global-color-rgb, 245, 197, 24), 0.55);
-  color: inherit !important;
 }
 
 .ct-brochure-doc-thumb {
@@ -3955,6 +3951,51 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
   font-style: normal;
   color: rgba(255, 255, 255, 0.55);
   font-size: 13px;
+}
+
+.ct-brochure-doc-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+
+.ct-brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.ct-brochure-btn--view {
+  background: var(--pbmit-global-color, #f5c518);
+  color: #0d1a24 !important;
+  border: 1px solid var(--pbmit-global-color, #f5c518);
+}
+
+.ct-brochure-btn--view:hover {
+  background: #ffd34a;
+  color: #0d1a24 !important;
+}
+
+.ct-brochure-btn--download {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.ct-brochure-btn--download:hover {
+  border-color: var(--pbmit-global-color, #f5c518);
+  color: var(--pbmit-global-color, #f5c518) !important;
 }
 
 @media (max-width: 767.98px) {

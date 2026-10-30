@@ -46,13 +46,8 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
   }, [path])
 
   return (
-    <a
-      className="ct-brochure-doc"
-      href={src}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span className="ct-brochure-doc-thumb">
+    <article className="ct-brochure-doc">
+      <div className="ct-brochure-doc-thumb">
         {!ready && !failed ? <span className="ct-brochure-doc-loading">Loading preview…</span> : null}
         {failed ? (
           <span className="ct-brochure-doc-fallback">
@@ -61,8 +56,8 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
           </span>
         ) : null}
         <canvas ref={canvasRef} className={ready ? 'is-ready' : ''} />
-      </span>
-      <span className="ct-brochure-doc-meta">
+      </div>
+      <div className="ct-brochure-doc-meta">
         <span className="ct-brochure-doc-icon" aria-hidden="true">
           <span>PDF</span>
         </span>
@@ -72,7 +67,24 @@ export default function BrochureCard({ file, title, size, pages = '1 page' }) {
             {pages} • PDF • {size}
           </em>
         </span>
-      </span>
-    </a>
+      </div>
+      <div className="ct-brochure-doc-actions">
+        <a
+          className="ct-brochure-btn ct-brochure-btn--view"
+          href={src}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View
+        </a>
+        <a
+          className="ct-brochure-btn ct-brochure-btn--download"
+          href={src}
+          download={file}
+        >
+          Download
+        </a>
+      </div>
+    </article>
   )
 }
