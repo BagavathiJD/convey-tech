@@ -31,6 +31,8 @@ export default function Footer() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/portfolio">Gallery</Link></li>
+            <li><Link to="/clients">Clients</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
@@ -78,9 +80,7 @@ export default function Footer() {
 
         {/* Copyright - Left */}
         <p className="footer-copyright">
-          Copyright © 2026 {site.name}.
-          <br />
-          All rights reserved.
+          Copyright © 2026 {site.name}. All rights reserved.
         </p>
 
         {/* Developer Credit - Right */}

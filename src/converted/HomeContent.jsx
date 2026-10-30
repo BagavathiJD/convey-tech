@@ -206,6 +206,37 @@ export default function HomeContent() {
 			</section>
 			{/* About End */}
 
+			{/* Stats Start */}
+			<section className="about-metrics fade-section">
+				<div className="container-fluid">
+					<div className="about-metrics-bar">
+						<article className="about-metrics-item">
+							<strong>
+								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="96" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">96</span>%
+							</strong>
+							<span>Plant uptime focus</span>
+						</article>
+						<article className="about-metrics-item">
+							<strong>
+								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="25" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">20</span>+
+							</strong>
+							<span>Years of experience</span>
+						</article>
+						<article className="about-metrics-item">
+							<strong>
+								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="500" data-interval="20" data-before="" data-before-style="" data-after="" data-after-style="">500</span>+
+							</strong>
+							<span>Systems delivered</span>
+						</article>
+						<article className="about-metrics-item about-metrics-item--cta">
+							<p>Built for demanding industrial environments across India.</p>
+							<Link to="/contact">Talk to our team →</Link>
+						</article>
+					</div>
+				</div>
+			</section>
+			{/* Stats End */}
+
 
 			{/* Why Choose Start */}
 			<section className="why-choose-section fade-section" data-aos="fade-up" data-aos-duration="800">
@@ -267,25 +298,31 @@ export default function HomeContent() {
 			{/* Why Choose End */}
 
 			{/* Service Start */}
-			<section className="section-xxl fade-section">
+			<section className="ct-products section-xxl fade-section">
+				<div className="ct-products-bg" aria-hidden="true"></div>
 				<div className="container">
-					<div className="d-md-flex justify-content-between">
-						<div className="pbmit-heading-subheading">
+					<div className="ct-products-head">
+						<div className="pbmit-heading-subheading text-center">
 							<h4 className="pbmit-subtitle">Our Products</h4>
-							<h2 className="pbmit-title">We create personalized <br className="d-inline" /> manufacturing plans</h2>
+							<h2 className="pbmit-title">Engineered systems for every plant layout</h2>
+							<p className="ct-products-intro">
+								Conveyors, silos, and feeding systems built for RMC, brick, and cement plants across India.
+							</p>
 						</div>
-						<div className="service-arrow d-inline-flex"></div>
+						<div className="service-arrow ct-products-arrows"></div>
 					</div>
-					<div className="swiper-slider" data-autoplay="true" data-loop="true" data-dots="false" data-arrows="true" data-arrows-class="service-arrow" data-columns="3" data-margin="30" data-effect="slide">
+					<div className="swiper-slider ct-products-slider" data-autoplay="true" data-loop="true" data-dots="false" data-arrows="true" data-arrows-class="service-arrow" data-columns="3" data-margin="28" data-effect="slide">
 						<div className="swiper-wrapper">
 							{products.map((product, index) => {
 								const to = getProductPath(product)
 								const image = product.listingImage || homeServiceImages[index % homeServiceImages.length]
+								const num = String(index + 1).padStart(2, '0')
 								return (
-									<article className="pbmit-service-style-1 swiper-slide" key={product.slug}>
+									<article className="pbmit-service-style-1 ct-product-card swiper-slide" key={product.slug}>
 										<div className="pbminfotech-post-item">
 											<div className="pbmit-box-content-wrap">
 												<div className="pbmit-image-wrap">
+													<span className="ct-product-index">{num}</span>
 													<div className="pbmit-featured-img-wrapper">
 														<div className="pbmit-featured-wrapper">
 															<img src={image} className="img-fluid" alt={product.title} />
@@ -302,8 +339,8 @@ export default function HomeContent() {
 													</div>
 													<div className="pbmit-service-btn-wrapper">
 														<div className="pbmit-service-btn">
-															<Link className="pbmit-button-inner" to={to}>
-																<span className="pbmit-button-text">Read More</span>
+															<Link className="pbmit-button-inner ct-product-link" to={to}>
+																<span className="pbmit-button-text">View Product</span>
 																<i className="pbmit-base-icon-right-arrow"></i>
 															</Link>
 														</div>
@@ -316,9 +353,6 @@ export default function HomeContent() {
 								)
 							})}
 						</div>
-					</div>
-					<div className="pbmit-bottom-text text-center mt-5 pt-md-2">
-						<Link to="/services"><u>Explore All Products</u></Link>
 					</div>
 				</div>
 			</section>
@@ -352,10 +386,8 @@ export default function HomeContent() {
 												loading="lazy"
 											/>
 											<span className="ct-brochure-preview-shade"></span>
-											<span className="ct-brochure-preview-badge">PDF</span>
 										</span>
 										<span className="ct-brochure-meta">
-											<span className="ct-brochure-label">PDF Brochure</span>
 											<strong className="ct-brochure-title">{item.title}</strong>
 											<span className="ct-brochure-size">{item.size}</span>
 										</span>
@@ -397,36 +429,7 @@ export default function HomeContent() {
 			) : null}
 			{/* Brochures End */}
 
-			{/* Stats Start */}
-			<section className="about-metrics fade-section">
-				<div className="container-fluid">
-					<div className="about-metrics-bar">
-						<article className="about-metrics-item">
-							<strong>
-								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="96" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">96</span>%
-							</strong>
-							<span>Plant uptime focus</span>
-						</article>
-						<article className="about-metrics-item">
-							<strong>
-								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="20" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">20</span>+
-							</strong>
-							<span>Years of experience</span>
-						</article>
-						<article className="about-metrics-item">
-							<strong>
-								<span className="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="500" data-interval="20" data-before="" data-before-style="" data-after="" data-after-style="">500</span>+
-							</strong>
-							<span>Systems delivered</span>
-						</article>
-						<article className="about-metrics-item about-metrics-item--cta">
-							<p>Built for demanding industrial environments across India.</p>
-							<Link to="/contact">Talk to our team →</Link>
-						</article>
-					</div>
-				</div>
-			</section>
-			{/* Stats End */}
+			
 
 
 

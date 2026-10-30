@@ -2916,7 +2916,7 @@ form .form-check-input[type=checkbox] {
   margin: 0;
   padding: 64px 24px 24px;
   background: #10232e;
-  border-top: 4px solid #7fc77e;
+
   color: #c5ced6;
   box-sizing: border-box;
 }
@@ -2961,7 +2961,7 @@ form .form-check-input[type=checkbox] {
 .custom-footer .footer-column h3 {
   margin: 0 0 20px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -2978,8 +2978,8 @@ form .form-check-input[type=checkbox] {
 .custom-footer .footer-column a,
 .custom-footer .footer-column p {
   color: #c5ced6;
-  font-size: 13px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.75;
   overflow-wrap: anywhere;
 }
 
@@ -2989,7 +2989,7 @@ form .form-check-input[type=checkbox] {
 }
 
 .custom-footer .footer-column a:hover {
-  color: #7fc77e;
+  color: #f5c518;
 }
 
 .custom-footer .footer-contact p {
@@ -3003,10 +3003,10 @@ form .form-check-input[type=checkbox] {
 
 .custom-footer .footer-brand .footer-description {
   color: #c5ced6 !important;
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.8;
   margin: 0;
-  max-width: 290px;
+  max-width: 320px;
   overflow-wrap: break-word;
 }
 
@@ -3029,14 +3029,16 @@ form .form-check-input[type=checkbox] {
 
 .custom-footer .footer-bottom p {
   color: #858f99 !important;
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.6;
   margin: 0;
+  white-space: nowrap;
 }
 
 .custom-footer .footer-copyright {
   text-align: left;
   flex: 1;
+  white-space: nowrap;
 }
 
 .custom-footer .footer-credit {
@@ -3094,18 +3096,18 @@ form .form-check-input[type=checkbox] {
   }
 
   .custom-footer .footer-brand .footer-description {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
   }
 
   .custom-footer .footer-column h3 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 15px;
   }
 
   .custom-footer .footer-column a,
   .custom-footer .footer-column p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .custom-footer .footer-bottom {
@@ -3117,6 +3119,7 @@ form .form-check-input[type=checkbox] {
 
   .custom-footer .footer-copyright {
     text-align: left;
+    white-space: normal;
   }
 
   .custom-footer .footer-credit {
@@ -3124,6 +3127,7 @@ form .form-check-input[type=checkbox] {
   }
 
   .custom-footer .footer-bottom p {
-    font-size: 11px;
+    font-size: 13px;
+    white-space: normal;
   }
 }
