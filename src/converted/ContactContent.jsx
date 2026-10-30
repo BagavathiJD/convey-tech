@@ -201,8 +201,29 @@ export default function ContactContent() {
 
 							<div className="col-md-12 col-lg-4">
 								<div className="contact-office-card contact-person-card">
+								
+									
 									<div className="contact-office-card-header">
-										<span className="contact-office-label">Chennai Region</span>
+									<span className="contact-office-label">Chennai Region</span>
+										<h3>Mr.Sathish</h3>
+										<p className="contact-office-subtitle">Sales & Service Engineer</p>
+									</div>
+									<div className="contact-office-card-body">
+
+										<ul className="contact-office-info-list">
+											<li className="contact-office-info-item">
+												<i className="fa fa-phone"></i>
+												<span><strong>Phone:</strong> <a href="tel:+916381681397">6381681397</a></span>
+											</li>
+
+											<li className="contact-office-info-item">
+												<i className="fa fa-clock-o"></i>
+												<span><strong>Hours:</strong> Mon – Sat: 9:00 AM – 6:00 PM</span>
+											</li>
+										</ul>
+									</div>
+									<div className="contact-office-card-header">
+										
 										<h3>Mrs. Anupriya</h3>
 										<p className="contact-office-subtitle">Regional Sales &amp; Customer Support</p>
 									</div>
@@ -222,6 +243,7 @@ export default function ContactContent() {
 									</div>
 
 								</div>
+								
 							</div>
 
 							<div className="col-md-12 col-lg-4">

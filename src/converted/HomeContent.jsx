@@ -124,7 +124,7 @@ export default function HomeContent() {
 						<div className="row g-4 g-xl-5 align-items-stretch home-about-row">
 							<div className="col-lg-5 home-about-media-col">
 								<div className="home-about-media">
-									<img src="/images/convey-tech/convey-tech-img-29.jpeg" alt="Convey Tech manufacturing and material handling" />
+									<img src="/images/convey-tech/about-us-image.png" alt="Convey Tech manufacturing and material handling" />
 									<div className="home-about-media-badge">
 										<span className="home-about-media-badge-num">25+</span>
 										<span className="home-about-media-badge-label">Years of Industrial Expertise</span>

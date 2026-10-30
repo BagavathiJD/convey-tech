@@ -1687,10 +1687,19 @@ a.product-lightbox-link img {
 }
 
 .service-details .pbmit-service-feature-image:not(.product-image-pair) {
-  aspect-ratio: 4 / 3;
+  width: 897px;
+  max-width: 100%;
+  height: 520px;
+  aspect-ratio: 897 / 520;
   margin: 20px 0 42px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.service-details .pbmit-service-feature-image:not(.product-image-pair) a.product-lightbox-link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .service-details .pbmit-service-feature-image:not(.product-image-pair) img {
@@ -1700,6 +1709,13 @@ a.product-lightbox-link img {
   object-fit: cover;
   object-position: center;
   border-radius: 0;
+}
+
+@media (max-width: 991.98px) {
+  .service-details .pbmit-service-feature-image:not(.product-image-pair) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 767.98px) {
