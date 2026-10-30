@@ -3967,6 +3967,8 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
   min-height: 42px;
   padding: 10px 14px;
   border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
   font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
   font-size: 14px;
   font-weight: 700;
@@ -3974,6 +3976,94 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
   text-decoration: none !important;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.ct-brochure-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.ct-brochure-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(13, 26, 36, 0.86);
+  backdrop-filter: blur(4px);
+}
+
+.ct-brochure-viewer-panel {
+  width: min(1100px, 100%);
+  height: min(860px, calc(100vh - 32px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0d1a24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.ct-brochure-viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #16222d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ct-brochure-viewer-bar strong {
+  color: #ffffff;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 15px;
+}
+
+.ct-brochure-viewer-actions button {
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--pbmit-global-color, #f5c518);
+  color: #0d1a24;
+  font-family: var(--pbmit-heading-typography-font-family, 'Archivo', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ct-brochure-viewer-loading {
+  padding: 18px 16px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.ct-brochure-viewer-pages {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  background: #0f1820;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ct-brochure-viewer-page {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 14px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.ct-brochure-viewer-error {
+  margin: 24px 0;
+  text-align: center;
+  color: #ffb4b4;
 }
 
 .ct-brochure-btn--view {
