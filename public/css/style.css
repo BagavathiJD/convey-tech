@@ -3048,14 +3048,14 @@ form .form-check-input[type=checkbox] {
 }
 
 .custom-footer .footer-credit a {
-  color: #f5c518;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .custom-footer .footer-credit a:hover {
-  color: #ffffff;
+  color: #f6f600;
 }
 
 .custom-footer .footer-mark {
