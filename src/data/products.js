@@ -114,7 +114,7 @@ export const products = [
     slug: 'cement-flyash-silo-automation-for-brick-plant',
     aliases: ['special-products'],
     title: 'Cement & Flyash Silo Automation for Brick Plant',
-    listingImage: '/images/special-product-image.png',
+    listingImage: '/images/convey-tech/cement-flyash-image-1.jpeg',
     listingDesc: 'Automated cement and flyash silo systems for brick plant operations.',
     paragraphs: [
       'We design and supply <b>Cement & Flyash Silo Automation</b> for brick plants — level control, feeding, and discharge systems matched to press and mixer demand.',

@@ -40,15 +40,16 @@ export default function SpecialProductsContent() {
       								<div className="pbmit-custom-heading">
       									<h3 className="pbmit-title">Cement & Fly Ash Silo Automation for Brick Plants</h3>
       								</div>
+									<div className="pbmit-service-feature-image">
+      								<ProductLightboxImage src="/images/convey-tech/automation-image-3.jpeg" alt="Mobile Portable Belt Conveyor" />
+      							</div>
       								<p>
 
 In fly ash brick plants and cement block manufacturing plants, cement and fly ash are stored in dedicated silos to ensure efficient material handling and continuous production. These materials are transferred from the silos to the weighing hopper through screw conveyors, where the required quantity of each material is accurately weighed according to the production mix.</p>
       								<p>Our cement and fly ash silo automation solutions are designed to streamline the entire material handling process, from storage and weighing to mixing and feeding, ensuring reliable and consistent performance for brick manufacturing plants.</p>
 									
       							</div>
-      							{/* <div className="pbmit-service-feature-image">
-      								<ProductLightboxImage src="/images/special-product-image.png" alt="Mobile Portable Belt Conveyor" />
-      							</div>*/}
+      							
 
 
 								
