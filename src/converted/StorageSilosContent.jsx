@@ -130,7 +130,7 @@ export default function StorageSilosContent() {
 										</div>
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/storage-silos-image-2.jpeg" alt="Silo accessories — valves, filters, and discharge equipment" />
+												<ProductLightboxImage src="/images/convey-tech/mini-cement-feeding-img-1.png" alt="Silo accessories — valves, filters, and discharge equipment" />
 											</figure>
 										</div>
 									</div>

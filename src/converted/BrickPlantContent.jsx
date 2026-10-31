@@ -56,12 +56,12 @@ export default function BrickPlantContent() {
 									<div className="row g-4">
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/brick-plant-image-1.jpeg" alt="Pneumatic cement feeding system" />
+												<ProductLightboxImage src="/images/convey-tech/flyask-brick-plant-image-1.jpeg" alt="Pneumatic cement feeding system" />
 											</figure>
 										</div>
 										<div className="col-md-6">
 											<figure className="product-image-pair-item">
-												<ProductLightboxImage src="/images/convey-tech/brick-plant-image-2.jpeg" alt="Pneumatic cement feeding equipment" />
+												<ProductLightboxImage src="/images/convey-tech/flyask-brick-plant-image-2.jpeg" alt="Pneumatic cement feeding equipment" />
 											</figure>
 										</div>
 									</div>
