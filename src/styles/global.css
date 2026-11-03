@@ -9,6 +9,14 @@
   --pbmit-link-color-hover: #f5c518;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 .fade-section {
   opacity: 0;
   transform: translateY(28px);

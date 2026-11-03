@@ -22,7 +22,7 @@ export default function HomeContent() {
 		<>
 
 			<div className="pbmit-slider-area pbmit-slider-one">
-				<div className="swiper-slider" data-autoplay="true" data-loop="true" data-dots="false" data-arrows="true" data-columns="1" data-margin="0" data-effect="fade">
+				<div className="swiper-slider" data-autoplay="true" data-loop="true" data-dots="false" data-arrows="false" data-columns="1" data-margin="0" data-effect="fade">
 					<div className="swiper-wrapper">
 						{/* Slide1 */}
 						<div className="swiper-slide">
