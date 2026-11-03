@@ -210,6 +210,12 @@ p {
   color: #111111;
 }
 
+@media (min-width: 1200px) and (hover: hover) {
+  .site-header.ct-header .main-menu .navigation>li.dropdown.menu-dismissed>ul {
+    display: none !important;
+  }
+}
+
 .pbmit-title-bar-content {
   padding-top: 140px;
 }
@@ -3639,7 +3645,7 @@ body .pbmit-footer-style-1 .pbmit-footer-text-area .pbmit-footer-text-inner .pbm
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f3;
+  background: #d4d4d3;
 }
 
 .clients-page-section .pbmit-featured-wrapper img,

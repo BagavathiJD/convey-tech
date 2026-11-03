@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom'
 const clients = [
  
   { name: 'ACC', image: 'acc-logo.webp' },
-  { name: 'Lakshmi', image: 'laksmi-logo.webp' },
-  { name: 'Vimal Bricks', image: 'vimal-bricks-logo.webp' },
+  
+  { name: 'Consolidated construction company ltd', image: 'client-cccl.webp' },
+  { name: 'Aparna enterprises Ltd', image: 'client-aparna.jpg' },
+  { name: 'R.P.P. Infra Projects Limited', image: 'rpp-logo.jpg' },
+  { name: 'Emarald construction Ltd', image: 'ecl-logo.jpg' },
+  { name: 'S v ready mix concrete', image: 'sv-logo.svg' },
   { name: 'DBL', image: 'dbl-logo.png' },
   { name: 'GMS', image: 'gms-logo.png' },
   { name: 'PC', image: 'p-c-logo.png' },

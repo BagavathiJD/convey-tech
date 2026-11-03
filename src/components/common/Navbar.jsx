@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { navItems, site } from '../../data/siteData'
 
@@ -8,6 +9,7 @@ function isActivePath(to, pathname) {
 
 export default function Navbar({ openMenus, toggleMenu, onNavigate, navId }) {
   const { pathname } = useLocation()
+  const [dismissedMenu, setDismissedMenu] = useState(null)
 
   return (
     <nav className="main-navigation pbmit-navbar main-menu navbar-expand-xl navbar-light" id={navId}>
@@ -37,12 +39,17 @@ export default function Navbar({ openMenus, toggleMenu, onNavigate, navId }) {
             const hasKids = Boolean(item.children?.length)
             const active = isActivePath(item.to, pathname)
             return (
-              <li key={item.label} className={`${hasKids ? 'dropdown' : ''} ${active ? 'active' : ''}`.trim()}>
+              <li
+                key={item.label}
+                className={`${hasKids ? 'dropdown' : ''} ${active ? 'active' : ''} ${dismissedMenu === item.label ? 'menu-dismissed' : ''}`.trim()}
+                onMouseLeave={() => setDismissedMenu(null)}
+              >
                 {hasKids ? (
                   <a
                     href="#"
                     onClick={(e) => {
                       e.preventDefault()
+                      setDismissedMenu(null)
                       toggleMenu(item.label)
                     }}
                   >
@@ -55,10 +62,18 @@ export default function Navbar({ openMenus, toggleMenu, onNavigate, navId }) {
                 )}
                 {hasKids ? (
                   <>
-                    <ul className={openMenus[item.label] ? 'open' : undefined}>
+                    <ul
+                      className={openMenus[item.label] ? 'open' : undefined}
+                    >
                       {item.children.map((child) => (
                         <li key={child.to} className={pathname === child.to ? 'active' : undefined}>
-                          <Link to={child.to} onClick={onNavigate}>
+                          <Link
+                            to={child.to}
+                            onClick={() => {
+                              setDismissedMenu(item.label)
+                              onNavigate()
+                            }}
+                          >
                             <span className="pbmit-span-wrapper">{child.label}</span>
                           </Link>
                         </li>
@@ -69,6 +84,7 @@ export default function Navbar({ openMenus, toggleMenu, onNavigate, navId }) {
                       onClick={(e) => {
                         e.preventDefault()
                         e.stopPropagation()
+                        setDismissedMenu(null)
                         toggleMenu(item.label)
                       }}
                     >
